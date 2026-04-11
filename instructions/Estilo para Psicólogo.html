@@ -1,0 +1,1878 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Styleguide — Rogério Paulo | Psicoterapia & Psicanálise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap" rel="stylesheet">
+<style>
+  /* ============================================================
+     CSS CUSTOM PROPERTIES — fonte de verdade do projeto
+     Copie estas variáveis para o CSS do projeto WordPress
+  ============================================================ */
+  :root {
+    /* CORES PRIMÁRIAS */
+    --color-primary:        #4A7C59;   /* Verde principal — botões, links, acentos */
+    --color-primary-dark:   #354327;   /* Verde escuro — hover de botão, footer */
+    --color-primary-light:  #E8F0E9;   /* Verde clarinho — fundo de seções alternadas */
+    --color-primary-mid:    #6B9E79;   /* Verde médio — ícones, checkmarks, tags */
+
+    /* CORES NEUTRAS */
+    --color-white:          #FFFFFF;
+    --color-bg:             #FFFFFF;   /* Fundo padrão das páginas */
+    --color-bg-section:     #F7FAF7;   /* Fundo de seções alternadas (verde bem claro) */
+    --color-bg-footer:      #1A2A1B;   /* Fundo do footer — verde escuro quase preto */
+    --color-bg-card:        #FFFFFF;   /* Fundo de cards */
+    --color-border:         #E2EAE3;   /* Bordas e divisores */
+
+    /* CORES DE TEXTO */
+    --color-text-heading:   #1A2B1C;   /* Títulos — verde muito escuro, quase preto */
+    --color-text-body:      #4A5568;   /* Corpo de texto — cinza escuro */
+    --color-text-muted:     #718096;   /* Texto secundário, labels, captions */
+    --color-text-light:     #A0AEC0;   /* Placeholder, texto desabilitado */
+    --color-text-white:     #FFFFFF;   /* Texto sobre fundos escuros */
+    --color-text-footer:    #CBD5E0;   /* Texto no footer */
+
+    /* CORES DE ESTADO */
+    --color-success:        #4A7C59;
+    --color-error:          #E53E3E;
+    --color-focus:          #4A7C5940; /* Ring de foco — verde com transparência */
+
+    /* TIPOGRAFIA */
+    --font-heading:         'Playfair Display', Georgia, serif;
+    --font-body:            'DM Sans', system-ui, sans-serif;
+
+    /* TAMANHOS DE FONTE — Desktop */
+    --text-display:         56px;   /* Hero principal */
+    --text-h1:              48px;
+    --text-h2:              38px;
+    --text-h3:              26px;
+    --text-h4:              20px;
+    --text-lead:            18px;   /* Subtítulo / intro de seção */
+    --text-body:            16px;
+    --text-small:           14px;
+    --text-xs:              12px;   /* Labels, tags, captions */
+
+    /* TAMANHOS DE FONTE — Mobile */
+    --text-display-mobile:  36px;
+    --text-h1-mobile:       32px;
+    --text-h2-mobile:       28px;
+    --text-h3-mobile:       22px;
+
+    /* LINE-HEIGHTS */
+    --lh-heading:           1.15;
+    --lh-lead:              1.5;
+    --lh-body:              1.7;
+
+    /* FONT WEIGHTS */
+    --fw-light:             300;
+    --fw-regular:           400;
+    --fw-medium:            500;
+    --fw-semibold:          600;
+    --fw-bold:              700;
+
+    /* LETTER SPACING */
+    --ls-tight:            -0.02em;  /* Títulos grandes */
+    --ls-normal:            0;
+    --ls-wide:              0.05em;  /* Labels uppercase */
+    --ls-wider:             0.1em;   /* Tags, overlines */
+
+    /* ESPAÇAMENTOS */
+    --space-1:   4px;
+    --space-2:   8px;
+    --space-3:   12px;
+    --space-4:   16px;
+    --space-5:   20px;
+    --space-6:   24px;
+    --space-8:   32px;
+    --space-10:  40px;
+    --space-12:  48px;
+    --space-16:  64px;
+    --space-20:  80px;
+    --space-24:  96px;
+    --space-32: 128px;
+
+    /* PADDING DE SEÇÕES */
+    --section-padding-y:    96px;   /* Padding vertical de seções — desktop */
+    --section-padding-x:    80px;   /* Padding horizontal — desktop */
+    --section-padding-y-md: 64px;   /* Tablet */
+    --section-padding-y-sm: 48px;   /* Mobile */
+
+    /* LARGURA DO LAYOUT */
+    --container-max:       1200px;
+    --container-wide:      1400px;
+    --container-narrow:     760px;
+
+    /* BORDER RADIUS */
+    --radius-sm:    4px;
+    --radius-md:    8px;
+    --radius-lg:   16px;
+    --radius-xl:   24px;
+    --radius-full: 9999px;
+
+    /* SOMBRAS */
+    --shadow-sm:   0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.04);
+    --shadow-md:   0 4px 16px rgba(74,124,89,0.10), 0 2px 4px rgba(0,0,0,0.06);
+    --shadow-lg:   0 10px 40px rgba(74,124,89,0.15), 0 4px 8px rgba(0,0,0,0.08);
+    --shadow-card: 0 2px 12px rgba(0,0,0,0.07);
+
+    /* TRANSIÇÕES */
+    --transition-fast:   150ms ease;
+    --transition-base:   250ms ease;
+    --transition-slow:   400ms ease;
+  }
+
+  /* ============================================================
+     RESET E BASE
+  ============================================================ */
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    color: var(--color-text-body);
+    background: #F4F6F4;
+    line-height: var(--lh-body);
+  }
+
+  /* ============================================================
+     LAYOUT DO STYLEGUIDE
+  ============================================================ */
+  .sg-page {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 48px 32px 120px;
+  }
+
+  .sg-header {
+    background: var(--color-bg-footer);
+    padding: 48px 32px;
+    border-radius: var(--radius-lg);
+    margin-bottom: 64px;
+    position: relative;
+    overflow: hidden;
+  }
+  .sg-header::before {
+    content: '';
+    position: absolute;
+    width: 300px; height: 300px;
+    background: var(--color-primary);
+    opacity: 0.1;
+    border-radius: 50%;
+    top: -80px; right: -80px;
+  }
+  .sg-header h1 {
+    font-family: var(--font-heading);
+    color: #fff;
+    font-size: 32px;
+    font-weight: var(--fw-bold);
+    margin-bottom: 8px;
+  }
+  .sg-header p {
+    color: var(--color-text-footer);
+    font-size: 15px;
+    font-family: var(--font-body);
+  }
+  .sg-header .sg-badge {
+    display: inline-block;
+    background: var(--color-primary);
+    color: #fff;
+    font-size: 12px;
+    font-family: var(--font-body);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+    margin-bottom: 16px;
+  }
+
+  .sg-section {
+    background: #fff;
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    margin-bottom: 32px;
+    border: 1px solid var(--color-border);
+  }
+
+  .sg-section-title {
+    font-family: var(--font-body);
+    font-size: 11px;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 6px;
+  }
+  .sg-section-heading {
+    font-family: var(--font-heading);
+    font-size: 24px;
+    color: var(--color-text-heading);
+    margin-bottom: 8px;
+    font-weight: var(--fw-bold);
+  }
+  .sg-section-desc {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    margin-bottom: 40px;
+    padding-bottom: 24px;
+    border-bottom: 1px solid var(--color-border);
+    line-height: 1.6;
+  }
+
+  .sg-label {
+    font-family: var(--font-body);
+    font-size: 11px;
+    color: var(--color-text-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    display: block;
+    margin-top: 12px;
+    margin-bottom: 2px;
+  }
+  .sg-value {
+    font-family: 'Courier New', monospace;
+    font-size: 12px;
+    color: var(--color-primary-dark);
+    background: var(--color-primary-light);
+    padding: 2px 8px;
+    border-radius: 4px;
+    display: inline-block;
+  }
+
+  /* ============================================================
+     1. CORES
+  ============================================================ */
+  .sg-colors-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+    gap: 16px;
+  }
+  .sg-color-swatch {
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    border: 1px solid var(--color-border);
+  }
+  .sg-color-block {
+    height: 80px;
+    width: 100%;
+  }
+  .sg-color-info {
+    padding: 10px 12px;
+    background: #fff;
+  }
+  .sg-color-name {
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: var(--fw-semibold);
+    color: var(--color-text-heading);
+    display: block;
+    margin-bottom: 2px;
+  }
+  .sg-color-hex {
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    color: var(--color-text-muted);
+  }
+  .sg-color-var {
+    font-family: 'Courier New', monospace;
+    font-size: 10px;
+    color: var(--color-primary);
+    display: block;
+    margin-top: 2px;
+    word-break: break-all;
+  }
+
+  .sg-colors-group { margin-bottom: 32px; }
+  .sg-colors-group-title {
+    font-size: 12px;
+    font-weight: var(--fw-semibold);
+    color: var(--color-text-muted);
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    margin-bottom: 12px;
+  }
+
+  /* ============================================================
+     2. TIPOGRAFIA
+  ============================================================ */
+  .sg-type-row {
+    padding: 24px 0;
+    border-bottom: 1px solid var(--color-border);
+    display: grid;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
+    align-items: start;
+  }
+  .sg-type-row:last-child { border-bottom: none; }
+  .sg-type-meta { padding-top: 4px; }
+  .sg-type-tag {
+    display: inline-block;
+    font-family: 'Courier New', monospace;
+    font-size: 11px;
+    background: var(--color-primary-light);
+    color: var(--color-primary-dark);
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-bottom: 6px;
+  }
+  .sg-type-specs {
+    font-size: 11px;
+    color: var(--color-text-muted);
+    line-height: 1.8;
+  }
+  .sg-type-specs span { display: block; }
+
+  .type-display {
+    font-family: var(--font-heading);
+    font-size: var(--text-display);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-heading);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-tight);
+  }
+  .type-h1 {
+    font-family: var(--font-heading);
+    font-size: var(--text-h1);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-heading);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-tight);
+  }
+  .type-h2 {
+    font-family: var(--font-heading);
+    font-size: var(--text-h2);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-heading);
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-tight);
+  }
+  .type-h3 {
+    font-family: var(--font-heading);
+    font-size: var(--text-h3);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-heading);
+    line-height: 1.3;
+  }
+  .type-h4 {
+    font-family: var(--font-heading);
+    font-size: var(--text-h4);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-heading);
+    line-height: 1.4;
+  }
+  .type-h5 {
+    font-family: var(--font-heading);
+    font-size: var(--text-lead);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-heading);
+    line-height: 1.4;
+  }
+  .type-h6 {
+    font-family: var(--font-heading);
+    font-size: var(--text-body);
+    font-weight: var(--fw-medium);
+    color: var(--color-text-heading);
+    line-height: 1.5;
+  }
+  .type-overline {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--color-primary);
+  }
+  .type-lead {
+    font-family: var(--font-body);
+    font-size: var(--text-lead);
+    font-weight: var(--fw-regular);
+    color: var(--color-text-body);
+    line-height: var(--lh-lead);
+  }
+  .type-body {
+    font-family: var(--font-body);
+    font-size: var(--text-body);
+    color: var(--color-text-body);
+    line-height: var(--lh-body);
+  }
+  .type-small {
+    font-family: var(--font-body);
+    font-size: var(--text-small);
+    color: var(--color-text-muted);
+    line-height: 1.6;
+  }
+  .type-caption {
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    color: var(--color-text-light);
+    letter-spacing: 0.03em;
+  }
+  .type-blockquote {
+    font-family: var(--font-heading);
+    font-size: 22px;
+    font-style: italic;
+    font-weight: var(--fw-medium);
+    color: var(--color-text-heading);
+    line-height: 1.5;
+  }
+
+  /* ============================================================
+     3. BOTÕES
+  ============================================================ */
+  .sg-buttons-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+    align-items: center;
+    margin-bottom: 24px;
+  }
+  .sg-buttons-label {
+    font-size: 12px;
+    color: var(--color-text-muted);
+    width: 100%;
+    margin-bottom: -8px;
+    font-weight: var(--fw-medium);
+  }
+
+  /* Botão Primary */
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--color-primary);
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: var(--fw-semibold);
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+    text-decoration: none;
+    transition: background var(--transition-base), border-color var(--transition-base), transform var(--transition-fast);
+  }
+  .btn-primary:hover {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    transform: translateY(-1px);
+  }
+  .btn-primary .btn-icon {
+    width: 20px; height: 20px;
+    background: rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 12px;
+  }
+
+  /* Botão Secondary (outline) */
+  .btn-secondary {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: var(--fw-semibold);
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    border: 2px solid var(--color-primary);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition-base);
+  }
+  .btn-secondary:hover {
+    background: var(--color-primary);
+    color: #fff;
+  }
+
+  /* Botão Ghost (fundo escuro) */
+  .btn-ghost {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: transparent;
+    color: #fff;
+    font-family: var(--font-body);
+    font-size: 15px;
+    font-weight: var(--fw-semibold);
+    padding: 14px 28px;
+    border-radius: var(--radius-md);
+    border: 2px solid rgba(255,255,255,0.5);
+    cursor: pointer;
+    text-decoration: none;
+    transition: all var(--transition-base);
+  }
+  .btn-ghost:hover {
+    background: rgba(255,255,255,0.1);
+    border-color: #fff;
+  }
+
+  /* Link com seta */
+  .btn-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-primary);
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: var(--fw-semibold);
+    text-decoration: none;
+    transition: gap var(--transition-base);
+  }
+  .btn-link:hover { gap: 10px; }
+  .btn-link .arrow { font-size: 16px; }
+
+  /* Tamanhos */
+  .btn-sm { padding: 10px 20px; font-size: 13px; }
+  .btn-lg { padding: 18px 36px; font-size: 17px; }
+
+  /* Dark background demo */
+  .sg-dark-bg {
+    background: var(--color-bg-footer);
+    padding: 24px;
+    border-radius: var(--radius-md);
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+    align-items: center;
+    margin-top: 16px;
+  }
+
+  /* ============================================================
+     4. COMPONENTES
+  ============================================================ */
+
+  /* Overline / Label de seção */
+  .overline {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: var(--font-body);
+    font-size: var(--text-xs);
+    font-weight: var(--fw-semibold);
+    letter-spacing: var(--ls-wider);
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 12px;
+  }
+  .overline::after {
+    content: '';
+    flex: 1;
+    height: 1px;
+    background: var(--color-primary);
+    max-width: 40px;
+  }
+
+  /* Card de serviço */
+  .card-service {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 32px;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+  .card-service:hover {
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-4px);
+  }
+  .card-service-icon {
+    width: 52px; height: 52px;
+    background: var(--color-primary-light);
+    border-radius: var(--radius-md);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+  .card-service h3 {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: var(--fw-semibold);
+    color: var(--color-text-heading);
+    margin-bottom: 10px;
+  }
+  .card-service p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 20px;
+  }
+
+  /* Card de blog/post */
+  .card-post {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    overflow: hidden;
+    transition: box-shadow var(--transition-base), transform var(--transition-base);
+  }
+  .card-post:hover { box-shadow: var(--shadow-lg); transform: translateY(-4px); }
+  .card-post-img {
+    width: 100%; height: 200px;
+    background: var(--color-primary-light);
+    display: flex; align-items: center; justify-content: center;
+    color: var(--color-primary);
+    font-size: 13px;
+    font-family: var(--font-body);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .card-post-body { padding: 24px; }
+  .card-post-tag {
+    display: inline-block;
+    font-size: 11px;
+    font-weight: var(--fw-semibold);
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: var(--color-primary);
+    margin-bottom: 10px;
+  }
+  .card-post h3 {
+    font-family: var(--font-heading);
+    font-size: 18px;
+    font-weight: var(--fw-semibold);
+    color: var(--color-text-heading);
+    line-height: 1.35;
+    margin-bottom: 10px;
+  }
+  .card-post p {
+    font-size: 14px;
+    color: var(--color-text-muted);
+    line-height: 1.7;
+    margin-bottom: 16px;
+  }
+
+  /* Blockquote */
+  .blockquote-component {
+    background: var(--color-primary-light);
+    border-left: 4px solid var(--color-primary);
+    border-radius: 0 var(--radius-md) var(--radius-md) 0;
+    padding: 32px 36px;
+    position: relative;
+  }
+  .blockquote-component::before {
+    content: '\201C';
+    font-family: var(--font-heading);
+    font-size: 80px;
+    color: var(--color-primary);
+    opacity: 0.2;
+    position: absolute;
+    top: -8px; left: 20px;
+    line-height: 1;
+  }
+  .blockquote-component blockquote {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-style: italic;
+    color: var(--color-text-heading);
+    line-height: 1.55;
+    margin-bottom: 16px;
+  }
+  .blockquote-component cite {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-style: normal;
+    color: var(--color-primary);
+    font-weight: var(--fw-semibold);
+  }
+
+  /* Badge / Tag */
+  .tag {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-family: var(--font-body);
+    font-size: 12px;
+    font-weight: var(--fw-semibold);
+    padding: 4px 12px;
+    border-radius: var(--radius-full);
+  }
+  .tag-green { background: var(--color-primary-light); color: var(--color-primary-dark); }
+  .tag-dark  { background: var(--color-bg-footer);     color: #fff; }
+  .tag-outline { background: transparent; border: 1px solid var(--color-primary); color: var(--color-primary); }
+
+  /* Checklist */
+  .checklist { list-style: none; }
+  .checklist li {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+    padding: 10px 0;
+    font-size: 15px;
+    color: var(--color-text-body);
+    border-bottom: 1px solid var(--color-border);
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist-icon {
+    width: 22px; height: 22px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    flex-shrink: 0;
+    margin-top: 1px;
+    font-size: 11px;
+    color: #fff;
+  }
+
+  /* Stats / Contador */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+  .stat-item { text-align: center; padding: 24px 16px; }
+  .stat-number {
+    font-family: var(--font-heading);
+    font-size: 44px;
+    font-weight: var(--fw-bold);
+    color: var(--color-text-heading);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: var(--ls-tight);
+  }
+  .stat-label {
+    font-family: var(--font-body);
+    font-size: 13px;
+    color: var(--color-text-muted);
+    font-weight: var(--fw-medium);
+  }
+
+  /* Input / Form */
+  .form-group { margin-bottom: 20px; }
+  .form-label {
+    font-family: var(--font-body);
+    font-size: 13px;
+    font-weight: var(--fw-semibold);
+    color: var(--color-text-heading);
+    display: block;
+    margin-bottom: 6px;
+  }
+  .form-label .required { color: var(--color-primary); margin-left: 2px; }
+  .form-input {
+    width: 100%;
+    font-family: var(--font-body);
+    font-size: 15px;
+    color: var(--color-text-body);
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 13px 16px;
+    outline: none;
+    transition: border-color var(--transition-base), box-shadow var(--transition-base);
+    appearance: none;
+  }
+  .form-input::placeholder { color: var(--color-text-light); }
+  .form-input:focus {
+    border-color: var(--color-primary);
+    box-shadow: 0 0 0 3px var(--color-focus);
+  }
+  .form-input.error { border-color: var(--color-error); }
+  textarea.form-input { resize: vertical; min-height: 120px; }
+
+  /* Icon box */
+  .icon-box {
+    width: 52px; height: 52px;
+    border-radius: var(--radius-md);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 20px;
+    flex-shrink: 0;
+  }
+  .icon-box-green { background: var(--color-primary-light); }
+  .icon-box-dark  { background: var(--color-primary); }
+
+  /* Hero banner demo */
+  .hero-demo {
+    background: linear-gradient(135deg, #2C3E2D 0%, #4A7C59 100%);
+    border-radius: var(--radius-lg);
+    padding: 64px 48px;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 24px;
+  }
+  .hero-demo::before {
+    content: '';
+    position: absolute;
+    width: 400px; height: 400px;
+    border: 80px solid rgba(255,255,255,0.04);
+    border-radius: 50%;
+    top: -100px; right: -100px;
+  }
+  .hero-demo::after {
+    content: '';
+    position: absolute;
+    width: 200px; height: 200px;
+    border: 40px solid rgba(255,255,255,0.04);
+    border-radius: 50%;
+    bottom: -60px; left: 40px;
+  }
+  .hero-demo-content { position: relative; z-index: 1; max-width: 560px; }
+  .hero-demo h1 {
+    font-family: var(--font-heading);
+    font-size: 44px;
+    font-weight: var(--fw-bold);
+    color: #fff;
+    line-height: var(--lh-heading);
+    letter-spacing: var(--ls-tight);
+    margin: 12px 0 20px;
+  }
+  .hero-demo p {
+    font-family: var(--font-body);
+    font-size: 17px;
+    color: rgba(255,255,255,0.8);
+    line-height: 1.65;
+    margin-bottom: 32px;
+  }
+
+  /* Section demo */
+  .section-demo {
+    background: var(--color-bg-section);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    margin-bottom: 24px;
+  }
+  .section-demo-white {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    margin-bottom: 24px;
+  }
+
+  /* Footer demo */
+  .footer-demo {
+    background: var(--color-bg-footer);
+    border-radius: var(--radius-lg);
+    padding: 48px;
+    color: var(--color-text-footer);
+  }
+  .footer-demo h4 {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: var(--fw-semibold);
+    color: #fff;
+    margin-bottom: 16px;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+  }
+  .footer-demo ul { list-style: none; }
+  .footer-demo ul li {
+    font-size: 14px;
+    color: var(--color-text-footer);
+    padding: 4px 0;
+    cursor: pointer;
+    transition: color var(--transition-base);
+  }
+  .footer-demo ul li:hover { color: var(--color-primary-mid); }
+  .footer-demo p { font-size: 14px; line-height: 1.7; }
+  .footer-nav { display: grid; grid-template-columns: repeat(4, 1fr); gap: 32px; margin-top: 32px; }
+
+  /* Grids demo */
+  .sg-grid-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+  .sg-grid-3 { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 20px; }
+  .sg-grid-4 { display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; gap: 16px; }
+
+  /* Spacing visual */
+  .spacing-row {
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    flex-wrap: wrap;
+    margin-bottom: 8px;
+  }
+  .spacing-block {
+    background: var(--color-primary);
+    opacity: 0.7;
+    border-radius: 3px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    padding-bottom: 4px;
+  }
+  .spacing-info {
+    text-align: center;
+    margin-top: 6px;
+  }
+  .spacing-info .sg-label { margin: 0; }
+
+  /* Border radius visual */
+  .radius-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .radius-block {
+    width: 80px; height: 80px;
+    background: var(--color-primary-light);
+    border: 2px solid var(--color-primary);
+    display: flex; align-items: center; justify-content: center;
+    font-size: 11px;
+    font-family: 'Courier New', monospace;
+    color: var(--color-primary-dark);
+    text-align: center;
+    flex-direction: column;
+  }
+
+  /* Navbar demo */
+  .navbar-demo {
+    background: var(--color-white);
+    border: 1px solid var(--color-border);
+    border-radius: var(--radius-md);
+    padding: 16px 32px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: var(--shadow-sm);
+    margin-bottom: 12px;
+  }
+  .navbar-logo {
+    font-family: var(--font-heading);
+    font-size: 20px;
+    font-weight: var(--fw-bold);
+    color: var(--color-text-heading);
+    display: flex; align-items: center; gap: 8px;
+  }
+  .navbar-logo .logo-icon {
+    width: 32px; height: 32px;
+    background: var(--color-primary);
+    border-radius: 50%;
+    display: flex; align-items: center; justify-content: center;
+    font-size: 14px;
+    color: #fff;
+  }
+  .navbar-nav { display: flex; gap: 28px; list-style: none; }
+  .navbar-nav a {
+    font-family: var(--font-body);
+    font-size: 14px;
+    font-weight: var(--fw-medium);
+    color: var(--color-text-body);
+    text-decoration: none;
+    transition: color var(--transition-base);
+  }
+  .navbar-nav a:hover, .navbar-nav a.active { color: var(--color-primary); }
+
+  /* Scrollbar */
+  ::-webkit-scrollbar { width: 6px; }
+  ::-webkit-scrollbar-track { background: #f0f0f0; }
+  ::-webkit-scrollbar-thumb { background: var(--color-primary); border-radius: 3px; }
+
+  /* Responsive */
+  @media (max-width: 768px) {
+    .sg-page { padding: 24px 16px 80px; }
+    .sg-section { padding: 28px 20px; }
+    .sg-type-row { grid-template-columns: 1fr; }
+    .sg-grid-2, .sg-grid-3, .sg-grid-4 { grid-template-columns: 1fr; }
+    .stats-grid { grid-template-columns: repeat(2,1fr); }
+    .footer-nav { grid-template-columns: repeat(2,1fr); }
+    .hero-demo { padding: 40px 28px; }
+    .hero-demo h1 { font-size: 32px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="sg-page">
+
+  <!-- HEADER -->
+  <div class="sg-header">
+    <span class="sg-badge">Styleguide v1.0</span>
+    <h1>Rogério Paulo — Design System</h1>
+    <p>Psicoterapia & Psicanálise &nbsp;·&nbsp; WordPress + Elementor &nbsp;·&nbsp; Março 2026</p>
+    <p style="margin-top:8px; font-size:13px; opacity:0.6;">Referência visual: MindWise Psychology Template &nbsp;·&nbsp; Fontes: Playfair Display + DM Sans</p>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 1 — CORES
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">01</div>
+    <div class="sg-section-heading">Paleta de Cores</div>
+    <p class="sg-section-desc">Todas as cores do projeto definidas como CSS Custom Properties. Use sempre as variáveis — nunca os valores hex diretamente no código.</p>
+
+    <div class="sg-colors-group">
+      <div class="sg-colors-group-title">Cores Primárias</div>
+      <div class="sg-colors-grid">
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#4A7C59"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Primary</span>
+            <span class="sg-color-hex">#4A7C59</span>
+            <span class="sg-color-var">--color-primary</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#354327"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Primary Dark</span>
+            <span class="sg-color-hex">#354327</span>
+            <span class="sg-color-var">--color-primary-dark</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#6B9E79"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Primary Mid</span>
+            <span class="sg-color-hex">#6B9E79</span>
+            <span class="sg-color-var">--color-primary-mid</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#E8F0E9; border-bottom: 1px solid #d0ddd1;"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Primary Light</span>
+            <span class="sg-color-hex">#E8F0E9</span>
+            <span class="sg-color-var">--color-primary-light</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-colors-group">
+      <div class="sg-colors-group-title">Fundos</div>
+      <div class="sg-colors-grid">
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#FFFFFF; border-bottom:1px solid #eee;"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">White / BG</span>
+            <span class="sg-color-hex">#FFFFFF</span>
+            <span class="sg-color-var">--color-bg</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#F7FAF7; border-bottom:1px solid #e8ede9;"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">BG Section</span>
+            <span class="sg-color-hex">#F7FAF7</span>
+            <span class="sg-color-var">--color-bg-section</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#2C3E2D"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">BG Footer</span>
+            <span class="sg-color-hex">#2C3E2D</span>
+            <span class="sg-color-var">--color-bg-footer</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#E2EAE3; border-bottom:1px solid #ccc;"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Border</span>
+            <span class="sg-color-hex">#E2EAE3</span>
+            <span class="sg-color-var">--color-border</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="sg-colors-group">
+      <div class="sg-colors-group-title">Texto</div>
+      <div class="sg-colors-grid">
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#1A2B1C"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Heading</span>
+            <span class="sg-color-hex">#1A2B1C</span>
+            <span class="sg-color-var">--color-text-heading</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#4A5568"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Body</span>
+            <span class="sg-color-hex">#4A5568</span>
+            <span class="sg-color-var">--color-text-body</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#718096"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Muted</span>
+            <span class="sg-color-hex">#718096</span>
+            <span class="sg-color-var">--color-text-muted</span>
+          </div>
+        </div>
+        <div class="sg-color-swatch">
+          <div class="sg-color-block" style="background:#CBD5E0"></div>
+          <div class="sg-color-info">
+            <span class="sg-color-name">Footer Text</span>
+            <span class="sg-color-hex">#CBD5E0</span>
+            <span class="sg-color-var">--color-text-footer</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 2 — TIPOGRAFIA
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">02</div>
+    <div class="sg-section-heading">Tipografia</div>
+    <p class="sg-section-desc"><strong>Títulos:</strong> Playfair Display (serif) &nbsp;·&nbsp; <strong>Corpo:</strong> DM Sans (sans-serif). Nunca use outras fontes no projeto.</p>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">Display</span>
+        <div class="sg-type-specs">
+          <span>Playfair Display</span>
+          <span>56px / Medium 500</span>
+          <span>line-height: 1.15</span>
+          <span>letter-spacing: -0.02em</span>
+          <span>Elementor: 56px</span>
+        </div>
+      </div>
+      <div class="type-display">Rogério Paulo</div>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">H1</span>
+        <div class="sg-type-specs">
+          <span>Playfair Display</span>
+          <span>48px / Medium 500</span>
+          <span>line-height: 1.15</span>
+          <span>Mobile: 32px</span>
+        </div>
+      </div>
+      <h1 class="type-h1">Você chegou até aqui por algum motivo.</h1>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">H2</span>
+        <div class="sg-type-specs">
+          <span>Playfair Display</span>
+          <span>38px / Medium 500</span>
+          <span>line-height: 1.15</span>
+          <span>Mobile: 28px</span>
+        </div>
+      </div>
+      <h2 class="type-h2">Por onde você quer começar?</h2>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">H3</span>
+        <div class="sg-type-specs">
+          <span>Playfair Display</span>
+          <span>26px / Medium 500</span>
+          <span>line-height: 1.3</span>
+          <span>Mobile: 22px</span>
+        </div>
+      </div>
+      <h3 class="type-h3">Terapia e Análise Online</h3>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">H4</span>
+        <div class="sg-type-specs">
+          <span>Playfair Display</span>
+          <span>20px / Medium 500</span>
+          <span>line-height: 1.4</span>
+        </div>
+      </div>
+      <h4 class="type-h4">Como funciona o grupo de estudos?</h4>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">H5</span>
+        <div class="sg-type-specs">
+          <span>Playfair Display</span>
+          <span>18px / Medium 500</span>
+          <span>line-height: 1.4</span>
+        </div>
+      </div>
+      <h5 class="type-h5">Encontros semanais online</h5>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">H6</span>
+        <div class="sg-type-specs">
+          <span>Playfair Display</span>
+          <span>16px / Medium 500</span>
+          <span>line-height: 1.5</span>
+        </div>
+      </div>
+      <h6 class="type-h6">Duração de 1h30min por encontro</h6>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">Overline</span>
+        <div class="sg-type-specs">
+          <span>DM Sans</span>
+          <span>12px / Semibold 600</span>
+          <span>letter-spacing: 0.1em</span>
+          <span>UPPERCASE</span>
+          <span>Cor: --color-primary</span>
+        </div>
+      </div>
+      <span class="type-overline">O Que Faço</span>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">Lead / p.lead</span>
+        <div class="sg-type-specs">
+          <span>DM Sans</span>
+          <span>18px / Regular 400</span>
+          <span>line-height: 1.5</span>
+          <span>Cor: --color-text-body</span>
+        </div>
+      </div>
+      <p class="type-lead">Algo dentro de você pede escuta. Este é um espaço seguro para cuidar de si de forma autêntica, profunda e real.</p>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">Body / p</span>
+        <div class="sg-type-specs">
+          <span>DM Sans</span>
+          <span>16px / Regular 400</span>
+          <span>line-height: 1.7</span>
+          <span>Cor: --color-text-body</span>
+        </div>
+      </div>
+      <p class="type-body">A psicoterapia é um tratamento clínico fundamentado em métodos psicológicos que buscam promover saúde mental, aliviar sofrimentos emocionais e cuidar de transtornos psíquicos. Trata-se de um processo de escuta, compreensão e intervenção.</p>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">Small</span>
+        <div class="sg-type-specs">
+          <span>DM Sans</span>
+          <span>14px / Regular 400</span>
+          <span>Cor: --color-text-muted</span>
+        </div>
+      </div>
+      <p class="type-small">Referência bibliográfica completa do capítulo publicado na obra coletiva sobre psicanálise winnicottiana.</p>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">Caption / xs</span>
+        <div class="sg-type-specs">
+          <span>DM Sans</span>
+          <span>12px / Regular 400</span>
+          <span>Cor: --color-text-light</span>
+        </div>
+      </div>
+      <span class="type-caption">© 2026 ANTONIO ROGERIO PAULO DE SOUSA LTDA — CNPJ 57.886.734/0001-89</span>
+    </div>
+
+    <div class="sg-type-row">
+      <div class="sg-type-meta">
+        <span class="sg-type-tag">Blockquote</span>
+        <div class="sg-type-specs">
+          <span>Playfair Display</span>
+          <span>22px / Italic 500</span>
+          <span>line-height: 1.5</span>
+          <span>Cor: --color-text-heading</span>
+        </div>
+      </div>
+      <span class="type-blockquote">"A vida de um indivíduo saudável é caracterizada tanto por medos, sentimentos conflituosos, dúvidas e frustrações como por características positivas."</span>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 3 — BOTÕES
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">03</div>
+    <div class="sg-section-heading">Botões</div>
+    <p class="sg-section-desc">Três variantes principais + link com seta. Todo botão deve ter estados <code>hover</code>, <code>focus-visible</code> e <code>active</code> visíveis.</p>
+
+    <div class="sg-buttons-label">Primary — fundo verde, texto branco</div>
+    <div class="sg-buttons-row">
+      <a class="btn-primary btn-sm" href="#">Botão Pequeno</a>
+      <a class="btn-primary" href="#">Agendar sessão</a>
+      <a class="btn-primary btn-lg" href="#">Agendar minha sessão →</a>
+      <a class="btn-primary" href="#"><span class="btn-icon">→</span> Com ícone</a>
+    </div>
+
+    <div class="sg-buttons-label" style="margin-top:20px;">Secondary — outline verde</div>
+    <div class="sg-buttons-row">
+      <a class="btn-secondary btn-sm" href="#">Botão Pequeno</a>
+      <a class="btn-secondary" href="#">Saiba mais</a>
+      <a class="btn-secondary btn-lg" href="#">Conheça minha trajetória</a>
+    </div>
+
+    <div class="sg-buttons-label" style="margin-top:20px;">Ghost — para fundos escuros</div>
+    <div class="sg-dark-bg">
+      <a class="btn-ghost" href="#">WhatsApp</a>
+      <a class="btn-ghost btn-sm" href="#">Ver publicações</a>
+    </div>
+
+    <div class="sg-buttons-label" style="margin-top:24px;">Link com seta — navegação inline</div>
+    <div class="sg-buttons-row">
+      <a class="btn-link" href="#">Saiba mais <span class="arrow">→</span></a>
+      <a class="btn-link" href="#">Conheça minha trajetória <span class="arrow">→</span></a>
+      <a class="btn-link" href="#">Ver todas as publicações <span class="arrow">→</span></a>
+    </div>
+
+    <div style="margin-top:32px; padding:24px; background:var(--color-primary-light); border-radius:var(--radius-md);">
+      <span class="sg-label">Variáveis CSS dos botões</span>
+      <div style="font-family:monospace; font-size:13px; color:var(--color-primary-dark); line-height:2; margin-top:8px;">
+        background: var(--color-primary)<br>
+        background:hover: var(--color-primary-dark)<br>
+        border-radius: var(--radius-md) → 8px<br>
+        padding: 14px 28px (default) | 10px 20px (sm) | 18px 36px (lg)<br>
+        font-family: var(--font-body)<br>
+        font-weight: var(--fw-semibold) → 600<br>
+        transition: var(--transition-base) → 250ms ease
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 4 — ESPAÇAMENTOS
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">04</div>
+    <div class="sg-section-heading">Espaçamentos</div>
+    <p class="sg-section-desc">Sistema de espaçamento em múltiplos de 4px. Use sempre as variáveis no CSS — nunca valores arbitrários.</p>
+
+    <div class="spacing-row">
+      <div>
+        <div class="spacing-block" style="width:4px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">4px</span><code class="sg-value">--space-1</code></div>
+      </div>
+      <div>
+        <div class="spacing-block" style="width:8px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">8px</span><code class="sg-value">--space-2</code></div>
+      </div>
+      <div>
+        <div class="spacing-block" style="width:12px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">12px</span><code class="sg-value">--space-3</code></div>
+      </div>
+      <div>
+        <div class="spacing-block" style="width:16px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">16px</span><code class="sg-value">--space-4</code></div>
+      </div>
+      <div>
+        <div class="spacing-block" style="width:24px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">24px</span><code class="sg-value">--space-6</code></div>
+      </div>
+      <div>
+        <div class="spacing-block" style="width:32px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">32px</span><code class="sg-value">--space-8</code></div>
+      </div>
+      <div>
+        <div class="spacing-block" style="width:48px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">48px</span><code class="sg-value">--space-12</code></div>
+      </div>
+      <div>
+        <div class="spacing-block" style="width:64px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">64px</span><code class="sg-value">--space-16</code></div>
+      </div>
+      <div>
+        <div class="spacing-block" style="width:96px; height:20px;"></div>
+        <div class="spacing-info"><span class="sg-label">96px</span><code class="sg-value">--section-padding-y</code></div>
+      </div>
+    </div>
+
+    <div style="margin-top:32px;">
+      <span class="sg-label">Padding de seções — Elementor</span>
+      <div style="font-family:monospace; font-size:13px; color:var(--color-primary-dark); line-height:2.2; margin-top:8px; background:var(--color-primary-light); padding:16px; border-radius:var(--radius-md);">
+        Desktop: padding-top/bottom → 96px &nbsp;|&nbsp; padding-left/right → 80px<br>
+        Tablet (≤1024px): padding-top/bottom → 64px<br>
+        Mobile (≤768px): padding-top/bottom → 48px &nbsp;|&nbsp; padding-left/right → 20px<br>
+        Container max-width: 1200px &nbsp;|&nbsp; Margin: 0 auto
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 5 — BORDER RADIUS & SOMBRAS
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">05</div>
+    <div class="sg-section-heading">Border Radius & Sombras</div>
+    <p class="sg-section-desc">Cantos arredondados e sombras consistentes em todos os elementos do site.</p>
+
+    <span class="sg-label">Border Radius</span>
+    <div class="radius-row" style="margin-top:12px; margin-bottom:40px;">
+      <div>
+        <div class="radius-block" style="border-radius:4px;">4px<br><small>--radius-sm</small></div>
+        <div class="spacing-info"><span class="sg-label">Inputs, tags</span></div>
+      </div>
+      <div>
+        <div class="radius-block" style="border-radius:8px;">8px<br><small>--radius-md</small></div>
+        <div class="spacing-info"><span class="sg-label">Botões, cards</span></div>
+      </div>
+      <div>
+        <div class="radius-block" style="border-radius:16px;">16px<br><small>--radius-lg</small></div>
+        <div class="spacing-info"><span class="sg-label">Seções, modais</span></div>
+      </div>
+      <div>
+        <div class="radius-block" style="border-radius:24px;">24px<br><small>--radius-xl</small></div>
+        <div class="spacing-info"><span class="sg-label">Cards hero</span></div>
+      </div>
+      <div>
+        <div class="radius-block" style="border-radius:9999px; width:80px;">999px<br><small>--radius-full</small></div>
+        <div class="spacing-info"><span class="sg-label">Badges, pills</span></div>
+      </div>
+    </div>
+
+    <span class="sg-label">Sombras</span>
+    <div class="sg-grid-3" style="margin-top:12px;">
+      <div style="background:#fff; padding:24px; border-radius:var(--radius-md); box-shadow:var(--shadow-sm); border:1px solid var(--color-border);">
+        <span class="sg-label">Shadow SM</span>
+        <code class="sg-value">--shadow-sm</code>
+        <p style="font-size:13px; margin-top:8px; color:var(--color-text-muted);">Navbar, inputs em repouso</p>
+      </div>
+      <div style="background:#fff; padding:24px; border-radius:var(--radius-md); box-shadow:var(--shadow-md);">
+        <span class="sg-label">Shadow MD</span>
+        <code class="sg-value">--shadow-md</code>
+        <p style="font-size:13px; margin-top:8px; color:var(--color-text-muted);">Cards em repouso</p>
+      </div>
+      <div style="background:#fff; padding:24px; border-radius:var(--radius-md); box-shadow:var(--shadow-lg);">
+        <span class="sg-label">Shadow LG</span>
+        <code class="sg-value">--shadow-lg</code>
+        <p style="font-size:13px; margin-top:8px; color:var(--color-text-muted);">Cards em hover</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 6 — COMPONENTES
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">06</div>
+    <div class="sg-section-heading">Componentes</div>
+    <p class="sg-section-desc">Padrões de UI reutilizáveis. Cada componente tem sua classe de referência e especificações de estilo.</p>
+
+    <!-- Overline -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Overline / Label de seção</span>
+    <div class="overline" style="max-width:200px;">O Que Faço</div>
+    <div style="font-family:monospace; font-size:12px; color:var(--color-primary-dark); background:var(--color-primary-light); padding:10px 14px; border-radius:6px; margin:12px 0 32px; line-height:1.8;">
+      .overline → DM Sans, 12px, 600, uppercase, letter-spacing:0.1em, cor: --color-primary<br>
+      Separador: linha verde 1px após o texto (via ::after)
+    </div>
+
+    <!-- Cards de serviço -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Card de Serviço</span>
+    <div class="sg-grid-3" style="margin-bottom:32px;">
+      <div class="card-service">
+        <div class="card-service-icon">🧠</div>
+        <h3>Terapia Online</h3>
+        <p>Sessões individuais com escuta ativa, diagnóstico e acompanhamento psicanalítico.</p>
+        <a class="btn-link" href="#">Saiba mais <span class="arrow">→</span></a>
+      </div>
+      <div class="card-service">
+        <div class="card-service-icon">🤝</div>
+        <h3>Grupo Terapêutico</h3>
+        <p>Um espaço seguro para refletir sobre masculinidade, emoções e relações. Gratuito.</p>
+        <a class="btn-link" href="#">Saiba mais <span class="arrow">→</span></a>
+      </div>
+      <div class="card-service">
+        <div class="card-service-icon">📚</div>
+        <h3>Grupo de Estudos</h3>
+        <p>Para profissionais da saúde. Discussões sobre psicanálise winnicottiana.</p>
+        <a class="btn-link" href="#">Saiba mais <span class="arrow">→</span></a>
+      </div>
+    </div>
+
+    <!-- Cards de blog -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Card de Blog / Post</span>
+    <div class="sg-grid-3" style="margin-bottom:32px;">
+      <div class="card-post">
+        <div class="card-post-img">Imagem do post</div>
+        <div class="card-post-body">
+          <span class="card-post-tag">Masculinidade</span>
+          <h3>Masculinidade Saudável em Winnicott</h3>
+          <p>A masculinidade saudável não é uma meta fixa, mas um processo contínuo...</p>
+          <a class="btn-link" href="#">Ler artigo <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="card-post">
+        <div class="card-post-img">Imagem do post</div>
+        <div class="card-post-body">
+          <span class="card-post-tag">Winnicott</span>
+          <h3>Identidade e Amadurecimento Emocional</h3>
+          <p>Em Winnicott, a identidade é o resultado da integração entre "ser" e "fazer"...</p>
+          <a class="btn-link" href="#">Ler artigo <span class="arrow">→</span></a>
+        </div>
+      </div>
+      <div class="card-post">
+        <div class="card-post-img">Imagem do post</div>
+        <div class="card-post-body">
+          <span class="card-post-tag">Paternidade</span>
+          <h3>Paternidade em Winnicott</h3>
+          <p>Winnicott destaca que o pai, assim como a mãe, é fundamental para a saúde...</p>
+          <a class="btn-link" href="#">Ler artigo <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Blockquote -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Blockquote / Citação (Winnicott)</span>
+    <div class="blockquote-component" style="margin-bottom:32px;">
+      <blockquote>"A vida de um indivíduo saudável é caracterizada tanto por medos, sentimentos conflituosos, dúvidas e frustrações como por características positivas."</blockquote>
+      <cite>Donald Winnicott</cite>
+    </div>
+
+    <!-- Tags / Badges -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Tags & Badges</span>
+    <div style="display:flex; gap:10px; flex-wrap:wrap; margin-bottom:32px;">
+      <span class="tag tag-green">Masculinidade</span>
+      <span class="tag tag-green">Winnicott</span>
+      <span class="tag tag-green">Saúde Mental</span>
+      <span class="tag tag-outline">Paternidade</span>
+      <span class="tag tag-outline">Psicanálise</span>
+      <span class="tag tag-dark">Gratuito</span>
+      <span class="tag tag-dark">Vagas limitadas</span>
+    </div>
+
+    <!-- Checklist -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Checklist / Lista de benefícios</span>
+    <ul class="checklist" style="max-width:500px; margin-bottom:32px;">
+      <li><span class="checklist-icon">✓</span> Encontros online quinzenais de 1h30min</li>
+      <li><span class="checklist-icon">✓</span> Material de estudo organizado com cronograma</li>
+      <li><span class="checklist-icon">✓</span> Ambiente acolhedor e sem julgamentos</li>
+      <li><span class="checklist-icon">✓</span> Aprofundamento teórico e prático</li>
+    </ul>
+
+    <!-- Stats -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Stats / Números em destaque</span>
+    <div style="background:var(--color-bg-section); border-radius:var(--radius-lg); padding:32px; margin-bottom:32px;">
+      <div class="stats-grid">
+        <div class="stat-item">
+          <div class="stat-number">10+</div>
+          <div class="stat-label">Anos de experiência</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">25+</div>
+          <div class="stat-label">Anos de voluntariado</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">5</div>
+          <div class="stat-label">Publicações científicas</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-number">3</div>
+          <div class="stat-label">Grupos ativos</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Icon boxes -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Icon Boxes</span>
+    <div style="display:flex; gap:16px; margin-bottom:32px;">
+      <div class="icon-box icon-box-green">📞</div>
+      <div class="icon-box icon-box-green">✉️</div>
+      <div class="icon-box icon-box-green">📍</div>
+      <div class="icon-box icon-box-dark" style="color:#fff;">📞</div>
+      <div class="icon-box icon-box-dark" style="color:#fff;">✉️</div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 7 — FORMULÁRIOS
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">07</div>
+    <div class="sg-section-heading">Formulários</div>
+    <p class="sg-section-desc">Inputs, textarea e select. Todos com estados: repouso, focus (anel verde) e erro (borda vermelha).</p>
+
+    <div style="max-width:560px;">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:16px;">
+        <div class="form-group">
+          <label class="form-label">Nome Completo <span class="required">*</span></label>
+          <input class="form-input" type="text" placeholder="Seu nome">
+        </div>
+        <div class="form-group">
+          <label class="form-label">E-mail <span class="required">*</span></label>
+          <input class="form-input" type="email" placeholder="seu@email.com">
+        </div>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Telefone</label>
+        <input class="form-input" type="tel" placeholder="(11) 99999-9999">
+      </div>
+      <div class="form-group">
+        <label class="form-label">Mensagem <span class="required">*</span></label>
+        <textarea class="form-input" placeholder="Escreva sua mensagem aqui..."></textarea>
+      </div>
+      <div class="form-group">
+        <label class="form-label">Campo com erro</label>
+        <input class="form-input error" type="text" value="Valor inválido">
+      </div>
+      <a class="btn-primary" href="#">Enviar mensagem →</a>
+    </div>
+
+    <div style="margin-top:32px; padding:16px; background:var(--color-primary-light); border-radius:var(--radius-md);">
+      <span class="sg-label">Specs do input</span>
+      <div style="font-family:monospace; font-size:12px; color:var(--color-primary-dark); line-height:2; margin-top:6px;">
+        border: 1px solid var(--color-border)<br>
+        border-radius: var(--radius-md) → 8px<br>
+        padding: 13px 16px<br>
+        font: 15px DM Sans<br>
+        focus: border-color: var(--color-primary) + box-shadow: 0 0 0 3px rgba(74,124,89,0.25)<br>
+        error: border-color: #E53E3E
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 8 — LAYOUTS DE PÁGINA
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">08</div>
+    <div class="sg-section-heading">Layouts de Página</div>
+    <p class="sg-section-desc">Demonstração dos padrões de layout usados nas seções do site. Todos os exemplos usam os tokens definidos acima.</p>
+
+    <!-- Navbar -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Navbar — Header fixo</span>
+    <div class="navbar-demo">
+      <div class="navbar-logo">
+        <div class="logo-icon">R</div>
+        Rogério Paulo
+      </div>
+      <ul class="navbar-nav">
+        <li><a href="#" class="active">Boas-vindas</a></li>
+        <li><a href="#">Quem Sou</a></li>
+        <li><a href="#">O Que Faço</a></li>
+        <li><a href="#">Publicações</a></li>
+        <li><a href="#">Blog</a></li>
+      </ul>
+      <a class="btn-primary btn-sm" href="#">Agendar sessão</a>
+    </div>
+    <div style="font-family:monospace; font-size:12px; color:var(--color-primary-dark); background:var(--color-primary-light); padding:10px 14px; border-radius:6px; margin-bottom:32px; line-height:1.8;">
+      position: fixed | top: 0 | width: 100% | z-index: 1000<br>
+      background: transparent → #fff (ao fazer scroll)<br>
+      box-shadow: nenhum → var(--shadow-sm) (ao fazer scroll)<br>
+      transition: background 250ms ease, box-shadow 250ms ease
+    </div>
+
+    <!-- Hero -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Hero — Seção de destaque (fundo escuro)</span>
+    <div class="hero-demo">
+      <div class="hero-demo-content">
+        <div class="overline" style="color:rgba(255,255,255,0.7);">Boas-vindas</div>
+        <h1>Você chegou até aqui por algum motivo.</h1>
+        <p>Algo dentro de você pede escuta. Este é um espaço seguro para cuidar de si de forma autêntica, profunda e real.</p>
+        <div style="display:flex; gap:12px; flex-wrap:wrap;">
+          <a class="btn-primary" href="#">Agendar minha sessão →</a>
+          <a class="btn-ghost" href="#">Quero saber mais</a>
+        </div>
+      </div>
+    </div>
+    <div style="font-family:monospace; font-size:12px; color:var(--color-primary-dark); background:var(--color-primary-light); padding:10px 14px; border-radius:6px; margin-bottom:32px; line-height:1.8;">
+      background: linear-gradient(135deg, --color-bg-footer 0%, --color-primary 100%)<br>
+      min-height: 80vh | padding: var(--section-padding-y) var(--section-padding-x)<br>
+      Imagem de fundo + overlay rgba(0,0,0,0.45)
+    </div>
+
+    <!-- Seção branca -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Seção padrão — fundo branco</span>
+    <div class="section-demo-white">
+      <div style="text-align:center; max-width:600px; margin:0 auto 48px;">
+        <div class="overline" style="justify-content:center;">O Que Faço</div>
+        <h2 class="type-h2">Por onde você quer começar?</h2>
+        <p class="type-lead" style="margin-top:16px;">Seja em sessões individuais, em grupos ou em espaços de estudo — o foco é sempre o mesmo.</p>
+      </div>
+      <div class="sg-grid-3">
+        <div class="card-service">
+          <div class="card-service-icon">🧠</div>
+          <h3>Terapia Online</h3>
+          <p>Sessões individuais com escuta ativa e acompanhamento psicanalítico.</p>
+          <a class="btn-link" href="#">Saiba mais <span class="arrow">→</span></a>
+        </div>
+        <div class="card-service">
+          <div class="card-service-icon">🤝</div>
+          <h3>Grupo Terapêutico</h3>
+          <p>Espaço seguro para homens refletirem sobre masculinidade e relações.</p>
+          <a class="btn-link" href="#">Saiba mais <span class="arrow">→</span></a>
+        </div>
+        <div class="card-service">
+          <div class="card-service-icon">📚</div>
+          <h3>Grupo de Estudos</h3>
+          <p>Para profissionais da saúde. Psicanálise winnicottiana na prática.</p>
+          <a class="btn-link" href="#">Saiba mais <span class="arrow">→</span></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Seção verde claro -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">Seção alternada — fundo verde claro (--color-bg-section)</span>
+    <div class="section-demo">
+      <div style="display:grid; grid-template-columns:1fr 1fr; gap:64px; align-items:center;">
+        <div>
+          <div class="overline">Nossa Abordagem</div>
+          <h2 class="type-h2" style="margin-bottom:20px;">Construindo crescimento através da conexão.</h2>
+          <p class="type-body" style="margin-bottom:24px;">A terapia e análise que realizo estão ancoradas na psicanálise winnicottiana, abordagem que valoriza o ambiente relacional como fator essencial para o amadurecimento emocional.</p>
+          <ul class="checklist">
+            <li><span class="checklist-icon">✓</span> Escuta ética e acolhedora</li>
+            <li><span class="checklist-icon">✓</span> Espaço seguro e confidencial</li>
+            <li><span class="checklist-icon">✓</span> Amadurecimento e autoconhecimento</li>
+          </ul>
+        </div>
+        <div style="background:var(--color-border); border-radius:var(--radius-lg); height:280px; display:flex; align-items:center; justify-content:center; color:var(--color-text-muted); font-size:14px;">
+          Foto / Imagem
+        </div>
+      </div>
+    </div>
+
+    <!-- CTA Section -->
+    <span class="sg-label" style="margin-bottom:12px; display:block;">CTA Final — fundo escuro</span>
+    <div style="background:var(--color-bg-footer); border-radius:var(--radius-lg); padding:64px 48px; text-align:center; position:relative; overflow:hidden;">
+      <div style="position:absolute; width:300px; height:300px; background:var(--color-primary); opacity:0.08; border-radius:50%; top:-100px; left:-80px;"></div>
+      <div style="position:absolute; width:200px; height:200px; background:var(--color-primary); opacity:0.08; border-radius:50%; bottom:-60px; right:-40px;"></div>
+      <div style="position:relative; z-index:1;">
+        <div class="overline" style="color:var(--color-primary-mid); justify-content:center; margin-bottom:16px;">Próximo Passo</div>
+        <h2 class="type-h2" style="color:#fff; margin-bottom:16px;">Pronto para dar o próximo passo?</h2>
+        <p class="type-lead" style="color:rgba(255,255,255,0.7); max-width:480px; margin:0 auto 32px;">A construção da relação terapêutica começa já na primeira sessão.</p>
+        <div style="display:flex; gap:12px; justify-content:center; flex-wrap:wrap;">
+          <a class="btn-primary" href="#">Agendar minha sessão →</a>
+          <a class="btn-ghost" href="#">WhatsApp</a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <span class="sg-label" style="margin-top:32px; margin-bottom:12px; display:block;">Footer</span>
+    <div class="footer-demo">
+      <div style="display:grid; grid-template-columns:2fr 1fr; gap:48px; align-items:start; padding-bottom:32px; border-bottom:1px solid rgba(255,255,255,0.1);">
+        <div>
+          <div style="font-family:var(--font-heading); font-size:22px; font-weight:700; color:#fff; margin-bottom:12px;">Rogério Paulo</div>
+          <p style="max-width:280px; margin-bottom:20px; opacity:0.8;">Psicólogo e psicanalista online. Especializado em saúde do homem e psicanálise winnicottiana.</p>
+          <div style="display:flex; flex-direction:column; gap:6px; font-size:14px; opacity:0.8;">
+            <span>📞 11 91571 3774</span>
+            <span>✉️ rogeriopaulopsi@gmail.com</span>
+            <span>📍 Av. Paulista 1106, sala 01 — São Paulo-SP</span>
+          </div>
+        </div>
+        <div>
+          <a class="btn-primary" href="#">Agendar sessão →</a>
+        </div>
+      </div>
+      <div class="footer-nav">
+        <div>
+          <h4>Navegação</h4>
+          <ul>
+            <li>Boas-vindas</li>
+            <li>Quem Sou</li>
+            <li>O Que Faço</li>
+            <li>Publicações</li>
+            <li>Blog</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Serviços</h4>
+          <ul>
+            <li>Terapia Online</li>
+            <li>Grupo Terapêutico</li>
+            <li>Grupo de Estudos</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contato</h4>
+          <ul>
+            <li>WhatsApp</li>
+            <li>E-mail</li>
+            <li>Agendar Sessão</li>
+          </ul>
+        </div>
+        <div>
+          <h4>Legal</h4>
+          <ul>
+            <li>Política de Privacidade</li>
+            <li>CNPJ 57.886.734/0001-89</li>
+          </ul>
+        </div>
+      </div>
+      <div style="margin-top:32px; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); display:flex; justify-content:space-between; font-size:13px; opacity:0.5;">
+        <span>© 2026 ANTONIO ROGERIO PAULO DE SOUSA LTDA</span>
+        <span>Desenvolvido por Origin7</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================
+       SEÇÃO 9 — CSS VARIABLES (referência rápida)
+  ======================================================== -->
+  <div class="sg-section">
+    <div class="sg-section-title">09</div>
+    <div class="sg-section-heading">CSS Variables — Referência Rápida</div>
+    <p class="sg-section-desc">Cole este bloco no início do arquivo <code>style.css</code> do projeto WordPress. Nunca use valores hardcoded — sempre referencie as variáveis.</p>
+
+    <pre style="background:#1A2B1C; color:#a8d8b0; font-family:'Courier New',monospace; font-size:13px; padding:32px; border-radius:var(--radius-lg); overflow-x:auto; line-height:1.9;">:root {
+  /* CORES */
+  --color-primary:        #4A7C59;
+  --color-primary-dark:   #354327;
+  --color-primary-light:  #E8F0E9;
+  --color-primary-mid:    #6B9E79;
+  --color-bg:             #FFFFFF;
+  --color-bg-section:     #F7FAF7;
+  --color-bg-footer:      #2C3E2D;
+  --color-border:         #E2EAE3;
+  --color-text-heading:   #1A2B1C;
+  --color-text-body:      #4A5568;
+  --color-text-muted:     #718096;
+  --color-text-light:     #A0AEC0;
+  --color-text-footer:    #CBD5E0;
+  --color-error:          #E53E3E;
+  --color-focus:          rgba(74,124,89,0.25);
+
+  /* TIPOGRAFIA */
+  --font-heading:         'Playfair Display', Georgia, serif;
+  --font-body:            'DM Sans', system-ui, sans-serif;
+  --text-display:         56px;
+  --text-h1:              48px;
+  --text-h2:              38px;
+  --text-h3:              26px;
+  --text-h4:              20px;
+  --text-lead:            18px;
+  --text-body:            16px;
+  --text-small:           14px;
+  --text-xs:              12px;
+  --lh-heading:           1.15;
+  --lh-lead:              1.5;
+  --lh-body:              1.7;
+  --fw-regular:           400;
+  --fw-medium:            500;
+  --fw-semibold:          600;
+  --fw-bold:              700;
+  --ls-tight:            -0.02em;
+  --ls-wide:              0.05em;
+  --ls-wider:             0.1em;
+
+  /* ESPAÇAMENTOS */
+  --space-1:   4px;   --space-2:   8px;   --space-3:  12px;
+  --space-4:  16px;   --space-5:  20px;   --space-6:  24px;
+  --space-8:  32px;   --space-10: 40px;   --space-12: 48px;
+  --space-16: 64px;   --space-20: 80px;   --space-24: 96px;
+  --section-padding-y:    96px;
+  --section-padding-x:    80px;
+  --container-max:      1200px;
+
+  /* BORDER RADIUS */
+  --radius-sm:    4px;
+  --radius-md:    8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* SOMBRAS */
+  --shadow-sm:  0 1px 3px rgba(0,0,0,0.08);
+  --shadow-md:  0 4px 16px rgba(74,124,89,0.10);
+  --shadow-lg:  0 10px 40px rgba(74,124,89,0.15);
+
+  /* TRANSIÇÕES */
+  --transition-fast: 150ms ease;
+  --transition-base: 250ms ease;
+  --transition-slow: 400ms ease;
+}</pre>
+  </div>
+
+</div><!-- /sg-page -->
+</body>
+</html>

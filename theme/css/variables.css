@@ -1,0 +1,152 @@
+/*
+ * variables.css — Rogério Paulo | Psicoterapia & Psicanálise
+ * CSS Custom Properties — fonte de verdade do projeto
+ * Não edite valores de cor ou tipografia diretamente nos outros arquivos.
+ * Altere aqui e o projeto inteiro reflete a mudança.
+ */
+
+:root {
+
+  /* ==========================================================
+     CORES PRIMÁRIAS
+  ========================================================== */
+  --color-primary:        #4A7C59;   /* Verde principal — botões, links, acentos */
+  --color-primary-dark:   #354327;   /* Verde escuro — hover de botão, footer */
+  --color-primary-light:  #E8F0E9;   /* Verde clarinho — fundo de seções alternadas */
+  --color-primary-mid:    #6B9E79;   /* Verde médio — ícones, checkmarks, tags */
+
+  /* ==========================================================
+     CORES NEUTRAS
+  ========================================================== */
+  --color-white:          #FFFFFF;
+  --color-bg:             #FFFFFF;   /* Fundo padrão das páginas */
+  --color-bg-section:     #F7FAF7;   /* Fundo de seções alternadas (verde bem claro) */
+  --color-bg-footer:      #1A2A1B;   /* Fundo do footer — verde escuro quase preto */
+  --color-bg-card:        #FFFFFF;   /* Fundo de cards */
+  --color-border:         #E2EAE3;   /* Bordas e divisores */
+
+  /* ==========================================================
+     CORES DE TEXTO
+  ========================================================== */
+  --color-text-heading:   #1A2B1C;   /* Títulos — verde muito escuro, quase preto */
+  --color-text-body:      #4A5568;   /* Corpo de texto — cinza escuro */
+  --color-text-muted:     #718096;   /* Texto secundário, labels, captions */
+  --color-text-light:     #A0AEC0;   /* Placeholder, texto desabilitado */
+  --color-text-white:     #FFFFFF;   /* Texto sobre fundos escuros */
+  --color-text-footer:    #CBD5E0;   /* Texto no footer */
+
+  /* ==========================================================
+     CORES DE ESTADO
+  ========================================================== */
+  --color-success:        #4A7C59;
+  --color-error:          #E53E3E;
+  --color-focus:          #4A7C5940; /* Ring de foco — verde com transparência */
+
+  /* ==========================================================
+     TIPOGRAFIA — FAMÍLIAS
+  ========================================================== */
+  --font-heading:         'Playfair Display', Georgia, serif;
+  --font-body:            'DM Sans', system-ui, sans-serif;
+
+  /* ==========================================================
+     TIPOGRAFIA — TAMANHOS (Desktop)
+  ========================================================== */
+  --text-display:         56px;   /* Hero principal */
+  --text-h1:              48px;
+  --text-h2:              38px;
+  --text-h3:              26px;
+  --text-h4:              20px;
+  --text-lead:            18px;   /* Subtítulo / intro de seção */
+  --text-body:            16px;
+  --text-small:           14px;
+  --text-xs:              12px;   /* Labels, tags, captions */
+
+  /* ==========================================================
+     TIPOGRAFIA — TAMANHOS (Mobile)
+  ========================================================== */
+  --text-display-mobile:  36px;
+  --text-h1-mobile:       32px;
+  --text-h2-mobile:       28px;
+  --text-h3-mobile:       22px;
+
+  /* ==========================================================
+     TIPOGRAFIA — LINE-HEIGHTS
+  ========================================================== */
+  --lh-heading:           1.15;
+  --lh-lead:              1.5;
+  --lh-body:              1.7;
+
+  /* ==========================================================
+     TIPOGRAFIA — FONT WEIGHTS
+  ========================================================== */
+  --fw-light:             300;
+  --fw-regular:           400;
+  --fw-medium:            500;
+  --fw-semibold:          600;
+  --fw-bold:              700;
+
+  /* ==========================================================
+     TIPOGRAFIA — LETTER SPACING
+  ========================================================== */
+  --ls-tight:            -0.02em;  /* Títulos grandes */
+  --ls-normal:            0;
+  --ls-wide:              0.05em;  /* Labels uppercase */
+  --ls-wider:             0.1em;   /* Tags, overlines */
+
+  /* ==========================================================
+     ESPAÇAMENTOS
+  ========================================================== */
+  --space-1:    4px;
+  --space-2:    8px;
+  --space-3:   12px;
+  --space-4:   16px;
+  --space-5:   20px;
+  --space-6:   24px;
+  --space-8:   32px;
+  --space-10:  40px;
+  --space-12:  48px;
+  --space-16:  64px;
+  --space-20:  80px;
+  --space-24:  96px;
+  --space-32: 128px;
+
+  /* ==========================================================
+     PADDING DE SEÇÕES
+  ========================================================== */
+  --section-padding-y:    96px;   /* Padding vertical — desktop */
+  --section-padding-x:    80px;   /* Padding horizontal — desktop */
+  --section-padding-y-md: 64px;   /* Tablet */
+  --section-padding-y-sm: 48px;   /* Mobile */
+
+  /* ==========================================================
+     LARGURA DO LAYOUT
+  ========================================================== */
+  --container-max:       1200px;
+  --container-wide:      1400px;
+  --container-narrow:     760px;
+
+  /* ==========================================================
+     BORDER RADIUS
+  ========================================================== */
+  --radius-sm:    4px;
+  --radius-md:    8px;
+  --radius-lg:   16px;
+  --radius-xl:   24px;
+  --radius-full: 9999px;
+
+  /* ==========================================================
+     SOMBRAS
+  ========================================================== */
+  --shadow-sm:   0 1px 3px rgba(0, 0, 0, 0.08), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-md:   0 4px 16px rgba(74, 124, 89, 0.10), 0 2px 4px rgba(0, 0, 0, 0.06);
+  --shadow-lg:   0 10px 40px rgba(74, 124, 89, 0.15), 0 4px 8px rgba(0, 0, 0, 0.08);
+  --shadow-card: 0 2px 12px rgba(0, 0, 0, 0.07);
+
+  /* ==========================================================
+     TRANSIÇÕES
+  ========================================================== */
+  --transition-fast:   150ms ease;
+  --transition-base:   250ms ease;
+  --transition-slow:   400ms ease;
+
+}
