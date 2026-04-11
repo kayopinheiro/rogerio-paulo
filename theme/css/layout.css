@@ -940,10 +940,17 @@
   gap: var(--space-4);
 }
 
+.footer-brand a {
+  display: inline-flex;
+  align-items: center;
+  width: fit-content;
+}
+
 .footer-brand img,
 .footer-brand svg {
-  height: 40px;
-  width: auto;
+  width: 40px;
+  height: auto;
+  max-width: 100%;
 }
 
 .footer-brand p {

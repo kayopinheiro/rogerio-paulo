@@ -9,7 +9,14 @@
       <!-- Coluna 1 — Brand -->
       <div class="footer-brand">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Rogério Paulo — Página inicial">
-          <span style="font-family: var(--font-heading); font-size: 18px; font-weight: 700; color: var(--color-white);">Rogério Paulo</span>
+          <img
+            src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/Vector-Logo.svg' ); ?>"
+            alt="Rogério Paulo"
+            width="220"
+            height="40"
+            loading="lazy"
+            decoding="async"
+          >
         </a>
         <p>Psicólogo e Psicanalista. Especialista em saúde do homem e psicanálise winnicottiana. Atendimento online para todo o Brasil.</p>
       </div>
