@@ -20,13 +20,26 @@ get_header();
 ============================================================ -->
 <section class="page-hero" aria-label="Como Rogério Paulo pode ajudar você">
   <div class="container">
+    <div class="page-hero-stack">
 
-    <span class="overline" style="color: var(--color-primary-mid);">Serviços</span>
-    <h1>Como posso caminhar com você.</h1>
-    <p class="lead">
-      Seja em sessões individuais, em grupos terapêuticos ou em espaços de estudo — o foco é sempre o mesmo: cuidar do amadurecimento emocional com responsabilidade e presença.
-    </p>
+      <div>
+        <span class="overline" style="color: var(--color-primary-mid);">Serviços</span>
+        <h1>Como posso caminhar com você.</h1>
+      </div>
 
+      <div class="page-hero-body">
+        <p class="lead">
+          Minha atuação é fruto de mais de 10 anos de experiência clínica e de 25 anos de trabalho social voltado à comunidade, além de pesquisas, publicações, condução de grupos terapêuticos e estudos interdisciplinares com autores como Richard Rohr, dedicados à compreensão do desenvolvimento e do amadurecimento humano.
+        </p>
+        <p class="lead">
+          Fundamentada na Psicanálise Winnicottiana, minha prática clínica foi construída ao longo de diferentes experiências formativas e institucionais, entre elas: a Universidade Federal do Ceará (UFC), a Fundação Batista Central (FBC), a Secretaria da Proteção Social do Ceará (SPS), a Universidade de São Paulo (USP), a Fundação São Paulo (PUC-SP) e a Illuman Español, nos Estados Unidos.
+        </p>
+        <a href="http://lattes.cnpq.br/" class="btn-ghost" target="_blank" rel="noopener noreferrer" style="margin-top: var(--space-6);">
+          Currículo Lattes →
+        </a>
+      </div>
+
+    </div>
   </div>
 </section>
 
@@ -42,7 +55,7 @@ get_header();
     <div class="grid-2col grid-2col--img-right">
 
       <div class="col-text">
-        <span class="overline">Atendimento individual</span>
+        <span class="overline">Cuidado Individual</span>
         <h2 id="sec-terapia-titulo">Terapia e Análise Online</h2>
 
         <p>
@@ -63,14 +76,15 @@ get_header();
         <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de agendar uma sessão.' ); ?>"
            class="btn-primary"
            target="_blank"
-           rel="noopener noreferrer">
+           rel="noopener noreferrer"
+           >
           Agendar uma sessão →
         </a>
       </div>
 
       <div class="col-img">
         <img
-          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/foto-rogerio-hero.jpg' ); ?>"
+          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/o-psicologo.png' ); ?>"
           alt="Sessão de psicoterapia online com Rogério Paulo"
           width="560"
           height="520"
@@ -103,7 +117,7 @@ get_header();
 
       <div class="col-img">
         <img
-          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/foto-rogerio-psicologo.jpg' ); ?>"
+          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/IMG-20230619-WA0100.png' ); ?>"
           alt="Grupo de Estudos Winnicottiano — Amadurecimento Pessoal"
           width="560"
           height="520"
@@ -113,29 +127,28 @@ get_header();
 
       <div class="col-text">
         <span class="overline">Formação</span>
-        <h2 id="sec-grupo-estudos-titulo">Grupo de Estudos Winnicottiano "Amadurecimento Pessoal"</h2>
+        <h2 id="sec-grupo-estudos-titulo">Grupos de Estudo</h2>
 
+        <h3 style="margin-top: var(--space-4); margin-bottom: var(--space-3);">Grupo I: Amadurecimento Emocional em Winnicott</h3>
         <p>
-          Um espaço virtual de aprendizado, troca e reflexão. Destinado a profissionais e estudantes das áreas de saúde, educação, direito, medicina ou qualquer pessoa envolvida com o cuidado de pessoas.
+          Um espaço virtual de aprendizado, troca e reflexão, destinado a profissionais, estudantes e a todas as pessoas interessadas no desenvolvimento humano e no cuidado emocional.
         </p>
         <p>
-          Em um ambiente acolhedor e estimulante, discutimos semanalmente temas fundamentais a partir da psicanálise winnicottiana, promovendo aprofundamento teórico e prático acerca do amadurecimento pessoal e profissional do ser humano.
+          A partir da leitura e discussão dos textos de Donald Winnicott, exploramos temas fundamentais como desenvolvimento emocional, ambiente facilitador, verdadeiro e falso self, criatividade, saúde emocional, amadurecimento e relações humanas.
+        </p>
+        <p>
+          Em um ambiente acolhedor e estimulante, promovemos o aprofundamento teórico e prático da Psicanálise Winnicottiana, favorecendo reflexões sobre o cuidado de si, do outro e os processos de amadurecimento ao longo da vida.
         </p>
 
-        <h3 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Como funciona</h3>
+        <h3 style="margin-top: var(--space-6); margin-bottom: var(--space-3);">Grupo II: Amadurecimento Humano e Espiritual em Richard Rohr</h3>
+        <p>
+          Este grupo de estudos é um convite para refletir sobre os processos de amadurecimento humano e espiritual a partir da obra <em>Caindo para Cima</em>, de Richard Rohr. Ao longo dos encontros, exploraremos temas como identidade, propósito, crises, quedas, perdas, recomeços e transformação pessoal.
+        </p>
+        <p>
+          Um espaço de leitura, diálogo e reflexão para homens e mulheres que desejam compreender melhor a própria jornada e encontrar novos significados para os desafios da vida.
+        </p>
 
-        <ol class="steps-list">
-          <li>Encontros online quinzenais com duração de 1h30min — o grupo se reúne uma vez por semana</li>
-          <li>Material de estudo organizado: você recebe o cronograma com os textos selecionados ou o livro que será trabalhado</li>
-          <li>Valor Mensal: R$ 150,00</li>
-        </ol>
-
-        <blockquote style="margin-top: var(--space-6);">
-          "A única companhia que tenho ao explorar o território desconhecido de um novo caso é a teoria que levo comigo e que tem se tornado parte de mim."
-          <cite>Donald Winnicott</cite>
-        </blockquote>
-
-        <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de fazer inscrição no Grupo de Estudos Winnicottiano.' ); ?>"
+        <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de fazer inscrição em um Grupo de Estudo.' ); ?>"
            class="btn-primary"
            target="_blank"
            rel="noopener noreferrer">
@@ -168,36 +181,117 @@ get_header();
   <div class="section-group-hero-overlay" aria-hidden="true"></div>
 
   <div class="container" style="position: relative; z-index: 1;">
-    <div style="max-width: 680px;">
+    <div class="section-group-hero-grid">
 
-      <span class="overline" style="color: var(--color-primary-mid);">Grupo terapêutico</span>
-      <h2 id="sec-grupo-homens-titulo">Grupo Terapêutico para Homens</h2>
+    <!-- Coluna esquerda: overline, título e parágrafos -->
+    <div class="section-group-hero-col-content">
+      <span class="overline" style="color: var(--color-primary-mid);">Cuidado Coletivo</span>
+      <h2 id="sec-grupo-homens-titulo">Grupo Terapêutico de Homens</h2>
 
       <p>
-        Vivemos em uma cultura que, por muito tempo, ensinou os homens a esconder suas emoções, resolver tudo sozinhos e não demonstrar fragilidade. Essa lógica tem gerado solidão, adoecimento psíquico e dificuldades de relacionamento — consigo mesmo e com os outros.
+        É um grupo que busca ajudar homens a se tornarem mais saudáveis, a partir de um ambiente seguro, onde é possível compartilhar os desafios da vida, receber apoio mútuo e aprender com as experiências dos participantes.
       </p>
       <p>
-        O Grupo Terapêutico para Homens é um espaço seguro e confidencial de escuta, acolhimento e partilha. Um encontro entre homens dispostos a refletir sobre suas vivências, afetos, dores, masculinidades, paternidades, sexualidades, relações familiares, trabalho, espiritualidade e sentido de vida.
+        Falar sobre nossos erros e acertos, além de escutar com profundidade as emoções e a história de vida de outros homens, pode gerar alívio para os sofrimentos e fortalecer nosso processo de mudança.
       </p>
       <p>
-        Através do vínculo e da troca de experiências com outros homens, o grupo favorece o autoconhecimento, o amadurecimento emocional e a construção de uma nova forma de estar no mundo — mais íntegra, saudável e verdadeira.
+        Não se trata de terapia em grupo, mas é um espaço que pode ter efeitos terapêuticos importantes.
       </p>
+    </div><!-- /.col-esquerda -->
 
-      <h3>Como funciona</h3>
+    <!-- Coluna direita: listas e botão -->
+    <div class="section-group-hero-col-content">
 
-      <ol class="steps-list">
-        <li>Encontros Online (1º sábado) e Presencial (3º sábado) das 10h às 11h30min</li>
-        <li>Para participar, faça inscrição no link abaixo para receber todas as informações</li>
-        <li>Gratuito — vagas limitadas</li>
-      </ol>
+      <h3 style="margin-top: 0;">O que o GT não é</h3>
+      <ul class="steps-list">
+        <li>Um ambiente para homens machistas, preconceituosos ou narcisistas</li>
+        <li>Um grupo com ideologia política, religiosa ou financeira — cada homem faz sua própria jornada</li>
+        <li>Um ambiente que valoriza status social, profissão ou situação financeira</li>
+        <li>Um grupo de falas longas — busca-se falar de forma breve, para que todos possam se expressar</li>
+        <li>Um grupo de homens que se colocam como superiores — valoriza-se a vulnerabilidade, as potencialidades e as dificuldades de cada participante</li>
+      </ul>
+
+      <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.2); margin: var(--space-6) 0;">
+
+      <h3 style="margin-top: 0;">Como funciona</h3>
+
+      <div class="como-funciona-grid">
+        <div>
+          <strong>Presencial (Gratuito)</strong>
+          <ul class="steps-list" style="margin-top: var(--space-2);">
+            <li>Local: Condomínio L'abitare-Butantã, São Paulo-SP</li>
+            <li>Dia: Primeiro sábado do mês</li>
+            <li>Horário: 10h às 12h</li>
+          </ul>
+        </div>
+        <div>
+          <strong>Online (Gratuito)</strong>
+          <ul class="steps-list" style="margin-top: var(--space-2);">
+            <li>Local: Google Meet</li>
+            <li>Dia: Terceiro sábado do mês</li>
+            <li>Horário: 10h às 11h30min</li>
+          </ul>
+        </div>
+      </div>
 
       <div style="margin-top: var(--space-8);">
-        <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de fazer inscrição no Grupo Terapêutico para Homens.' ); ?>"
+        <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de fazer inscrição no Grupo Terapêutico de Homens.' ); ?>"
            class="btn-primary"
            target="_blank"
            rel="noopener noreferrer">
           Inscrição gratuita →
         </a>
+      </div>
+
+    </div><!-- /.col-direita -->
+    </div><!-- /.section-group-hero-grid -->
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SEÇÃO 5 — GRUPO DE PESQUISA
+     Âncora: id="pesquisa"
+     Bloco: 2 colunas | texto esquerda | foto direita
+============================================================ -->
+<section id="pesquisa" class="section section--white" aria-labelledby="sec-pesquisa-titulo">
+  <div class="container">
+    <div class="grid-2col grid-2col--img-right">
+
+      <div class="col-text">
+        <span class="overline">Cuidado Interdisciplinar</span>
+        <h2 id="sec-pesquisa-titulo">Grupo de Pesquisa (i)maturidade masculina</h2>
+
+        <p>
+          Espaço voltado a pessoas interessadas em aprofundar o estudo sobre o amadurecimento e o desenvolvimento emocional do homem ao longo da vida, a partir de uma perspectiva interdisciplinar.
+        </p>
+        <p>
+          A proposta busca ampliar a compreensão sobre os desafios, vivências e transformações da jornada masculina, promovendo reflexão, troca de conhecimentos e construção coletiva.
+        </p>
+
+        <blockquote>
+          "Num setting profissional, dado o comportamento profissional apropriado, o doente pode encontrar uma solução pessoal para problemas complexos da vida emocional e das relações interpessoais; o que fizemos não foi aplicar um tratamento, mas facilitar o crescimento."
+          <cite>Donald Winnicott</cite>
+        </blockquote>
+
+        <p><strong>Modalidade:</strong> online e gratuito.</p>
+
+        <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de participar do Grupo de Pesquisa sobre imaturidade masculina.' ); ?>"
+           class="btn-primary"
+           target="_blank"
+           rel="noopener noreferrer">
+          Participar →
+        </a>
+      </div>
+
+      <div class="col-img">
+        <img
+          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/cuidado.png' ); ?>"
+          alt="Grupo de Pesquisa (i)maturidade masculina"
+          width="560"
+          height="520"
+          loading="lazy"
+        >
       </div>
 
     </div>
@@ -206,7 +300,7 @@ get_header();
 
 
 <!-- ============================================================
-     SEÇÃO 5 — FAQ
+     SEÇÃO 7 — FAQ
      Bloco: 2 colunas | texto esquerda (sticky) | accordion direita
      Referência: screenshot/Mindwise Psychology Counseling Template Preview (3).png — FAQ
 ============================================================ -->
@@ -234,7 +328,7 @@ get_header();
 
         <div class="faq-item" role="listitem">
           <button class="faq-question" type="button">
-            Como funciona a sessão inicial?
+            <span class="faq-question-text">Como funciona a sessão inicial?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-answer">
@@ -246,7 +340,7 @@ get_header();
 
         <div class="faq-item" role="listitem">
           <button class="faq-question" type="button">
-            As sessões são online?
+            <span class="faq-question-text">As sessões são online?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-answer">
@@ -258,7 +352,7 @@ get_header();
 
         <div class="faq-item" role="listitem">
           <button class="faq-question" type="button">
-            Qual é o valor das sessões individuais?
+            <span class="faq-question-text">Qual é o valor das sessões individuais?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-answer">
@@ -270,7 +364,7 @@ get_header();
 
         <div class="faq-item" role="listitem">
           <button class="faq-question" type="button">
-            O Grupo Terapêutico para Homens é realmente gratuito?
+            <span class="faq-question-text">O Grupo Terapêutico para Homens é realmente gratuito?</span>
             <span class="faq-icon" aria-hidden="true">+</span>
           </button>
           <div class="faq-answer">
@@ -288,7 +382,7 @@ get_header();
 
 
 <!-- ============================================================
-     SEÇÃO 6 — CTA FINAL
+     SEÇÃO 8 — CTA FINAL
      Fundo: --color-bg-footer
 ============================================================ -->
 <section class="section-cta" aria-labelledby="sec-cta-o-que-faco-titulo">

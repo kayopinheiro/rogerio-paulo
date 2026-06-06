@@ -22,10 +22,10 @@ function rogerio_paulo_enqueue_styles() {
         wp_get_theme( 'hello-elementor' )->get( 'Version' )
     );
 
-    // Google Fonts — Playfair Display + DM Sans
+    // Google Fonts — DM Sans
     wp_enqueue_style(
         'rogerio-paulo-fonts',
-        'https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;1,9..40,400&display=swap',
+        'https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&display=swap',
         [],
         null
     );
@@ -35,7 +35,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-variables',
         get_stylesheet_directory_uri() . '/css/variables.css',
         [ 'rogerio-paulo-fonts' ],
-        '1.1.0'
+        '1.1.3'
     );
 
     // Reset, body e tipografia global
@@ -43,7 +43,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-base',
         get_stylesheet_directory_uri() . '/css/base.css',
         [ 'rogerio-paulo-variables' ],
-        '1.1.0'
+        '1.1.3'
     );
 
     // Botões, cards, tags, blockquote, WhatsApp flutuante
@@ -51,7 +51,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-components',
         get_stylesheet_directory_uri() . '/css/components.css',
         [ 'rogerio-paulo-base' ],
-        '1.1.0'
+        '1.1.3'
     );
 
     // Navbar, footer, seções, grids, FAQ
@@ -59,7 +59,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-layout',
         get_stylesheet_directory_uri() . '/css/layout.css',
         [ 'rogerio-paulo-components' ],
-        '1.1.0'
+        '1.1.3'
     );
 
     // Declaração do tema filho (style.css) — depois de tudo
@@ -67,7 +67,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-child',
         get_stylesheet_uri(),
         [ 'rogerio-paulo-layout' ],
-        '1.1.0'
+        '1.1.3'
     );
 }
 add_action( 'wp_enqueue_scripts', 'rogerio_paulo_enqueue_styles' );
@@ -82,7 +82,7 @@ function rogerio_paulo_enqueue_scripts() {
         'rogerio-paulo-script',
         get_stylesheet_directory_uri() . '/js/script.js',
         [],          // sem dependências (vanilla JS)
-        '1.1.0',
+        '1.1.3',
         true         // carrega no rodapé (antes de </body>)
     );
 }
@@ -275,6 +275,80 @@ add_action( 'admin_menu', function () {
 add_action( 'wp_before_admin_bar_render', function () {
     global $wp_admin_bar;
     $wp_admin_bar->remove_menu( 'comments' );
+} );
+
+
+/* ==========================================================
+   CRIAR PÁGINAS AUTOMATICAMENTE NA ATIVAÇÃO DO TEMA
+========================================================== */
+function rogerio_paulo_criar_paginas() {
+    $paginas = [
+        [
+            'titulo'   => 'Home',
+            'slug'     => 'home',
+            'template' => 'template-home.php',
+        ],
+        [
+            'titulo'   => 'Quem Sou',
+            'slug'     => 'quem-sou',
+            'template' => 'template-quem-sou.php',
+        ],
+        [
+            'titulo'   => 'O Que Faço',
+            'slug'     => 'o-que-faco',
+            'template' => 'template-o-que-faco.php',
+        ],
+        [
+            'titulo'   => 'Blog',
+            'slug'     => 'blog',
+            'template' => 'template-blog.php',
+        ],
+        [
+            'titulo'   => 'Publicações',
+            'slug'     => 'publicacoes',
+            'template' => 'template-publicacoes.php',
+        ],
+        [
+            'titulo'   => 'Obrigado',
+            'slug'     => 'obrigado',
+            'template' => 'template-obrigado.php',
+        ],
+    ];
+
+    foreach ( $paginas as $pagina ) {
+        $existe = get_page_by_path( $pagina['slug'] );
+        if ( $existe ) {
+            continue;
+        }
+
+        $id = wp_insert_post( [
+            'post_title'   => $pagina['titulo'],
+            'post_name'    => $pagina['slug'],
+            'post_status'  => 'publish',
+            'post_type'    => 'page',
+            'post_content' => '',
+        ] );
+
+        if ( $id && ! is_wp_error( $id ) ) {
+            update_post_meta( $id, '_wp_page_template', $pagina['template'] );
+        }
+    }
+
+    // Define a página Home como página inicial
+    $home = get_page_by_path( 'home' );
+    if ( $home ) {
+        update_option( 'show_on_front', 'page' );
+        update_option( 'page_on_front', $home->ID );
+    }
+}
+add_action( 'after_switch_theme', 'rogerio_paulo_criar_paginas' );
+
+// Garante que as páginas sejam criadas mesmo com o tema já ativo
+add_action( 'admin_init', function () {
+    if ( ! get_option( 'rogerio_paulo_paginas_criadas' ) ) {
+        rogerio_paulo_criar_paginas();
+        update_option( 'rogerio_paulo_paginas_criadas', true );
+    }
 } );
 
 

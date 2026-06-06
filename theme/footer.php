@@ -10,9 +10,9 @@
       <div class="footer-brand">
         <a href="<?php echo esc_url( home_url( '/' ) ); ?>" aria-label="Rogério Paulo — Página inicial">
           <img
-            src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/Vector-Logo.svg' ); ?>"
+            src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/logo-horizontal-footer.svg' ); ?>"
             alt="Rogério Paulo"
-            width="220"
+            width="160"
             height="40"
             loading="lazy"
             decoding="async"

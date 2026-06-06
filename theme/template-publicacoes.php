@@ -24,7 +24,7 @@ get_header();
     <span class="overline" style="color: var(--color-primary-mid);">Produção acadêmica</span>
     <h1>Pesquisa, escrita e reflexão.</h1>
     <p class="lead">
-      Além da clínica, Rogério é pesquisador e autor de capítulos em obras coletivas sobre psicanálise winnicottiana, saúde do homem e amadurecimento emocional.
+      Aqui você encontra minhas publicações: artigos, textos e reflexões construídos a partir da minha prática clínica, atuação social, experiência na condução de grupos terapêuticos e participação em seminários e congressos.
     </p>
 
   </div>
@@ -56,28 +56,47 @@ get_header();
             [
                 'img'      => $base_pub . 'pub-1.avif',
                 'alt'      => 'Capa — Winnicott Seminários Mineiros: Ambiente e Holding',
-                'ref'      => 'IN Mediadora, 2021.',
+                'ref'      => 'IMN Editora, 2023.',
                 'titulo'   => 'Winnicott Seminários Mineiros: Ambiente e Holding',
-                'desc'     => 'Obra coletiva que reúne seminários sobre a teoria winnicottiana do ambiente e holding — conceitos centrais para a compreensão do amadurecimento emocional.',
+                'capitulos' => [
+                    [
+                        'nome' => 'A perspectiva winnicottiana de indivíduo saudável: possibilidades de cuidado na saúde mental dos homens (p.369)',
+                        'desc' => 'Neste capítulo, convido você a refletir comigo sobre possibilidades de cuidado emocional voltadas à saúde mental dos homens a partir da perspectiva de Donald Winnicott. Compartilho reflexões construídas a partir da minha experiência clínica em atendimentos psicoterapêuticos individuais e na facilitação de grupos de homens (Illuman Brasil), espaços que me permitiram acompanhar diferentes histórias, dores e processos de amadurecimento. Ao longo do texto, você encontrará uma discussão sobre a importância de ambientes seguros e acolhedores, onde homens possam expressar medos, angústias e vulnerabilidades sem julgamentos. Também apresento como a espontaneidade, a criatividade e os vínculos humanos podem favorecer processos de cuidado, elaboração emocional e uma experiência mais autêntica de ser.',
+                    ],
+                ],
                 'download' => '',
                 'compra'   => 'https://inmeditora.com.br/produto/winnicott-seminarios-mineiros/',
             ],
             [
-                'img'      => $base_pub . 'pub-2.avif',
-                'alt'      => 'Capa — A Clínica Social: Percurso e Perspectivas',
-                'ref'      => 'Instituto de Psicologia da Universidade de São Paulo — Projeto APOIAR, 2022.',
-                'titulo'   => 'A Clínica Social: Percurso e Perspectivas',
-                'desc'     => 'Obra coletiva sobre a clínica social winnicottiana e o atendimento psicológico em contextos de vulnerabilidade, reunindo pesquisas do Projeto APOIAR Online.',
-                'download' => 'https://www.rogeriopaulopsi.com.br/_files/ugd/4ada22_eaf9f450d4024047a4018cd35e1ae952.pdf',
+                'img'      => $base_pub . 'pub-3.avif',
+                'alt'      => 'Capa — Adolescência: Desafios, Sofrimento e Esperança',
+                'ref'      => 'Instituto de Psicologia da Universidade de São Paulo, 2023.',
+                'titulo'   => 'Adolescência: Desafios, Sofrimento e Esperança',
+                'capitulos' => [
+                    [
+                        'nome' => 'Reflexões sobre a paternidade na atualidade a luz de Winnicott (p.179)',
+                        'desc' => 'Neste artigo, convidamos você a refletir comigo sobre as transformações da paternidade na atualidade a partir da perspectiva de Donald Winnicott. Ao longo do texto, abordamos o papel do pai ou de quem exerce essa função em diferentes configurações familiares, destacando a importância do cuidado, da presença e dos vínculos no desenvolvimento emocional humano. Você encontrará uma reflexão sobre como a teoria winnicottiana permanece atual e relevante para compreender os desafios e as experiências da paternidade no mundo contemporâneo.',
+                    ],
+                ],
+                'download' => 'https://www.rogeriopaulopsi.com.br/_files/ugd/4ada22_55a8b9b82e04425a93769f258e3e69bc.pdf',
                 'compra'   => '',
             ],
             [
-                'img'      => $base_pub . 'pub-3.avif',
-                'alt'      => 'Capa — Adolescência: Desafios, Sofrimento e Esperança',
-                'ref'      => 'Instituto de Psicologia da Universidade de São Paulo, 2021.',
-                'titulo'   => 'Adolescência: Desafios, Sofrimento e Esperança',
-                'desc'     => 'As transformações contemporâneas têm provocado mudanças significativas nos modos de ser e exercer a função adolescente na atualidade, à luz da teoria winnicottiana.',
-                'download' => 'https://www.rogeriopaulopsi.com.br/_files/ugd/4ada22_55a8b9b82e04425a93769f258e3e69bc.pdf',
+                'img'      => $base_pub . 'pub-2.avif',
+                'alt'      => 'Capa — A Clínica Social: Percurso e Perspectivas',
+                'ref'      => 'Instituto de Psicologia da Universidade de São Paulo, 2022.',
+                'titulo'   => 'A Clínica Social: Percurso e Perspectivas',
+                'capitulos' => [
+                    [
+                        'nome' => 'Psicopatologia do TOC: Perspectivas da Psicanálise Winnicottiana (p. 21)',
+                        'desc' => 'Ao longo deste capítulo, apresentamos uma reflexão sobre o Transtorno Obsessivo-Compulsivo (TOC) a partir da perspectiva da psicanálise de Donald Winnicott. Por meio de um caso clínico e do diálogo com a psicopatologia contemporânea, busco ampliar a compreensão sobre os aspectos emocionais que atravessam o sofrimento relacionado ao TOC. Você encontrará uma discussão sobre a complexidade desse transtorno e sobre como a teoria do desenvolvimento emocional de Winnicott pode contribuir para uma escuta clínica mais sensível, destacando a importância de um ambiente terapêutico confiável e reparador nos processos de cuidado e amadurecimento emocional.',
+                    ],
+                    [
+                        'nome' => 'O Homem e a transicionalidade (p. 461)',
+                        'desc' => 'Neste capítulo, convido você a refletir comigo sobre como o sofrimento emocional na contemporaneidade pode assumir diferentes formas, especialmente por meio das dependências — sejam elas relacionadas a drogas, álcool, internet, sexo, comida ou relações interpessoais. A partir da teoria de Donald Winnicott, apresento um caso clínico que nos ajuda a compreender como experiências precoces de falhas no cuidado podem impactar profundamente a vida emocional de um indivíduo. Ao longo do texto, você encontrará uma reflexão sobre a importância de um ambiente terapêutico seguro, confiável e acolhedor, capaz de favorecer experiências reparadoras e abrir caminhos para processos de integração emocional e amadurecimento humano.',
+                    ],
+                ],
+                'download' => 'https://www.rogeriopaulopsi.com.br/_files/ugd/4ada22_eaf9f450d4024047a4018cd35e1ae952.pdf',
                 'compra'   => '',
             ],
             [
@@ -85,7 +104,12 @@ get_header();
                 'alt'      => 'Capa — O Gesto Espontâneo em 90 Trabalhos',
                 'ref'      => 'Expressão Gráfica e Editora, 2019.',
                 'titulo'   => 'O Gesto Espontâneo em 90 Trabalhos',
-                'desc'     => 'Coletânea que reúne 90 trabalhos orientados pelo olhar winnicottiano sobre o gesto espontâneo, a criatividade e o verdadeiro self na clínica psicanalítica contemporânea.',
+                'capitulos' => [
+                    [
+                        'nome' => 'O verdadeiro self e bebês prematuros: As Possibilidades do Método Canguru (p. 341)',
+                        'desc' => 'Neste capítulo, compartilhamos uma reflexão sobre os impactos da prematuridade no desenvolvimento emocional do bebê a partir da teoria de Donald Winnicott. Ao longo do texto, busco compreender como as experiências iniciais de cuidado influenciam a constituição do verdadeiro self e a importância do ambiente nos primeiros momentos da vida. Você encontrará uma discussão sobre os desafios enfrentados por bebês prematuros e suas famílias, além de uma reflexão sobre o potencial do Método Canguru como uma prática de cuidado capaz de fortalecer vínculos, favorecer a presença emocional e contribuir para um desenvolvimento psíquico mais saudável, mesmo em contextos de adversidade.',
+                    ],
+                ],
                 'download' => '',
                 'compra'   => 'https://www.amazon.com.br/Gesto-Espont%C3%A2neo-Em-90-Trabalhos/dp/8542014820',
             ],
@@ -103,7 +127,14 @@ get_header();
             <div class="card-publication-body">
               <p class="card-publication-ref"><?php echo esc_html( $pub['ref'] ); ?></p>
               <h3><?php echo esc_html( $pub['titulo'] ); ?></h3>
-              <p><?php echo esc_html( $pub['desc'] ); ?></p>
+
+              <?php foreach ( $pub['capitulos'] as $cap ) : ?>
+                <div class="card-publication-chapter">
+                  <p class="card-publication-chapter-name">Capítulo: <?php echo esc_html( $cap['nome'] ); ?></p>
+                  <p class="card-publication-chapter-desc"><?php echo esc_html( $cap['desc'] ); ?></p>
+                </div>
+              <?php endforeach; ?>
+
               <div class="card-publication-actions">
                 <?php if ( $pub['download'] ) : ?>
                   <a href="<?php echo esc_url( $pub['download'] ); ?>"
@@ -135,7 +166,20 @@ get_header();
 
 
 <!-- ============================================================
-     SEÇÃO 3 — CTA
+     SEÇÃO 3 — CITAÇÃO WINNICOTT
+============================================================ -->
+<section class="section section--dark" aria-label="Citação de Winnicott">
+  <div class="container">
+    <blockquote class="quote-winnicott">
+      <p>"A única companhia que tenho ao explorar o território desconhecido de um novo caso é a teoria que levo comigo e que tem se tornado parte de mim e em relação à qual nem sequer tenho que pensar de maneira deliberada. Trata-se da teoria do desenvolvimento emocional do indivíduo..."</p>
+      <footer>— Winnicott</footer>
+    </blockquote>
+  </div>
+</section>
+
+
+<!-- ============================================================
+     SEÇÃO 4 — CTA
      Fundo: --color-bg-footer
 ============================================================ -->
 <section class="section-cta" aria-labelledby="sec-cta-publicacoes-titulo">

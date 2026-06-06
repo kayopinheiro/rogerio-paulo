@@ -18,10 +18,9 @@
     <!-- Logo -->
     <a href="<?php echo esc_url( home_url( '/' ) ); ?>" class="site-logo" aria-label="Rogério Paulo — Página inicial">
       <img
-        src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/horizontal-branco.svg' ); ?>"
+        src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/logo-horizontal-nav.svg' ); ?>"
         alt="Rogério Paulo"
-        width="240"
-        height="44"
+        height="40"
         loading="eager"
         decoding="async"
       >

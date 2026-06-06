@@ -60,9 +60,9 @@ get_header();
   <div class="container">
 
     <span class="overline" style="color: var(--color-primary-mid);">Blog</span>
-    <h1>Reflexões sobre o homem e a vida interior.</h1>
+    <h1>Fique por dentro.</h1>
     <p class="lead">
-      Textos que nascem da prática clínica, da pesquisa e do cotidiano do homem contemporâneo. Sobre masculinidade, paternidade, emoções e saúde psíquica.
+      Um espaço mais pessoal onde compartilho reflexões, histórias, experiências e pensamentos que surgem dos encontros da vida, da prática clínica, da espiritualidade, da cultura e do cotidiano. São textos escritos de forma mais livre e autoral, destinados a quem aprecia refletir sobre o ser humano, suas relações, desafios e possibilidades de amadurecimento.
     </p>
 
   </div>

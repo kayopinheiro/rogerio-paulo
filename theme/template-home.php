@@ -33,10 +33,10 @@ get_header();
     <div class="hero-content">
 
       <span class="overline" style="color: var(--color-primary-mid);">Psicoterapia & Psicanálise</span>
-      <h1>Você chegou até aqui por algum <span style="color: var(--color-primary-mid); font-weight: var(--fw-medium); font-style: italic;">motivo.</span></h1>
+      <h1>Que bom que você chegou <span style="color: var(--color-primary-mid); font-weight: var(--fw-medium); font-style: italic;">até mim.</span></h1>
 
       <p class="lead">
-        Algo dentro de você pede escuta. Este é um espaço seguro para cuidar de si de forma autêntica, profunda e real.
+        Algo dentro de você pede escuta e cuidado especializado. Este é um ambiente seguro para cuidar do seu amadurecimento emocional, ou de quem você ama, de forma autêntica, profunda e real.
       </p>
 
       <div class="btn-group">
@@ -67,7 +67,7 @@ get_header();
 
       <div class="col-img">
         <img
-          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/foto-rogerio-psicologo.jpg' ); ?>"
+          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/sobre-mim.avif' ); ?>"
           alt="Rogério Paulo — psicólogo e psicanalista"
           width="580"
           height="520"
@@ -77,13 +77,13 @@ get_header();
 
       <div class="col-text">
         <span class="overline">Sobre mim</span>
-        <h2 id="sec-apresentacao-titulo">Olá, sou Rogério Paulo.</h2>
+        <h2 id="sec-apresentacao-titulo">Olá, sou Antônio Rogério Paulo de Sousa.</h2>
 
         <p>
-          Sou cearense, 40+, psicólogo e psicanalista com mais de 10 anos de experiência. Trabalho com homens e mulheres adultos online, com foco na psicanálise winnicottiana — uma abordagem que valoriza o amadurecimento emocional e a escuta profunda do ser humano.
+          Sou psicólogo, formado pela Unifanor | Wyden (CRP 06/194006), especialista em Psicologia em Saúde pelo CRP-SP, psicanalista winnicottiano e pesquisador no LABÔ – Laboratório de Comportamento e Mídia, vinculado à Fundação São Paulo (PUC-SP), no grupo de pesquisa "A crise do amadurecimento na contemporaneidade". Também sou membro da organização internacional Illuman Español nos Estados Unidos e facilitador de Grupos Terapêuticos de Homens no Instituto Indivíduo Saudável-IS.
         </p>
         <p>
-          Minha prática parte de um lugar simples: acredito que você só consegue se cuidar de verdade na relação com alguém de forma autêntica. Na sessão inicial, você será recebido com cuidado e presença.
+          Tenho mais de 10 anos de experiência clínica e 25 anos de trabalho social, sendo o último psicoterapeuta voluntário no Projeto APOIAR-Online, vinculado ao Instituto de Psicologia da Universidade de São Paulo – USP.
         </p>
 
         <a href="<?php echo esc_url( home_url( '/quem-sou' ) ); ?>" class="btn-link">
@@ -108,13 +108,13 @@ get_header();
       <h2 id="sec-servicos-titulo">Por onde você quer começar?</h2>
     </div>
 
-    <div class="grid-3col" style="margin-top: var(--space-12);">
+    <div class="grid-4col" style="margin-top: var(--space-12);">
 
       <!-- Card 1 -->
       <article class="card-service">
         <div class="card-service-icon" aria-hidden="true">🧠</div>
         <h3>Terapia e Análise Online</h3>
-        <p>Sessões individuais com escuta ativa, diagnóstico e acompanhamento psicanalítico. Um espaço só seu.</p>
+        <p>Sessões individuais para mulheres e homens adultos.</p>
         <a href="<?php echo esc_url( home_url( '/o-que-faco#terapia' ) ); ?>" class="btn-link">
           Saiba mais →
         </a>
@@ -122,20 +122,30 @@ get_header();
 
       <!-- Card 2 -->
       <article class="card-service">
-        <div class="card-service-icon" aria-hidden="true">🤝</div>
-        <h3>Grupo Terapêutico para Homens</h3>
-        <p>Um espaço seguro para refletir sobre masculinidade, emoções, paternidade e relações. Gratuito e com vagas limitadas.</p>
-        <a href="<?php echo esc_url( home_url( '/o-que-faco#grupo-homens' ) ); ?>" class="btn-link">
+        <div class="card-service-icon" aria-hidden="true">📖</div>
+        <h3>Grupo de Estudos (Donald Winnicott e Richard Rohr)</h3>
+        <p>Dois grupos de estudos voltados para profissionais de saúde e pessoas que atuam no cuidado e desenvolvimento do ser humano.</p>
+        <a href="<?php echo esc_url( home_url( '/o-que-faco#grupo-estudos' ) ); ?>" class="btn-link">
           Saiba mais →
         </a>
       </article>
 
       <!-- Card 3 -->
       <article class="card-service">
-        <div class="card-service-icon" aria-hidden="true">📖</div>
-        <h3>Grupo de Estudos Winnicottiano</h3>
-        <p>Para profissionais e estudantes da saúde. Discussões sobre psicanálise winnicottiana e amadurecimento pessoal.</p>
-        <a href="<?php echo esc_url( home_url( '/o-que-faco#grupo-estudos' ) ); ?>" class="btn-link">
+        <div class="card-service-icon" aria-hidden="true">🤝</div>
+        <h3>Grupo Terapêutico de Homens</h3>
+        <p>Um ambiente de escuta e fala para homens adultos de forma presencial em São Paulo e Online.</p>
+        <a href="<?php echo esc_url( home_url( '/o-que-faco#grupo-homens' ) ); ?>" class="btn-link">
+          Saiba mais →
+        </a>
+      </article>
+
+      <!-- Card 4 -->
+      <article class="card-service">
+        <div class="card-service-icon" aria-hidden="true">🔬</div>
+        <h3>Pesquisa (i)maturidade Masculina</h3>
+        <p>Uma pesquisa interdisciplinar voltada a pessoas interessadas em se aprofundar no amadurecimento do homem ao longo da vida.</p>
+        <a href="<?php echo esc_url( home_url( '/o-que-faco#pesquisa' ) ); ?>" class="btn-link">
           Saiba mais →
         </a>
       </article>
@@ -152,7 +162,7 @@ get_header();
   <div class="container">
 
     <blockquote>
-      "A vida de um indivíduo saudável é caracterizada tanto por medos, sentimentos conflituosos, dúvidas e frustrações como por características positivas."
+      "A vida de um indivíduo saudável é caracterizada tanto por medos e conflitos quanto por aspectos positivos."
       <cite>Donald Winnicott</cite>
     </blockquote>
 
@@ -170,10 +180,10 @@ get_header();
 <section class="section section--white" aria-labelledby="sec-publicacoes-titulo">
   <div class="container">
 
-    <div class="section-header">
+    <div class="section-header section-header--full">
       <span class="overline">Pesquisa</span>
       <h2 id="sec-publicacoes-titulo">Pesquisa e Reflexão</h2>
-      <p>Além da clínica, Rogério é pesquisador e autor de capítulos em livros sobre psicanálise winnicottiana.</p>
+      <p>Leia minhas publicações: artigos, textos e reflexões construídos a partir da minha prática clínica, atuação social, experiência na condução de grupos terapêuticos e participação em seminários e congressos. São textos acadêmicos, capítulos de livros e artigos que refletem meu compromisso com o estudo do cuidado emocional, da saúde mental e dos processos de amadurecimento humano, buscando contribuir para o diálogo entre teoria, prática e experiência.</p>
     </div>
 
     <?php
@@ -241,12 +251,12 @@ get_header();
                alt="Capa — Winnicott Seminários Mineiros: Ambiente e Holding"
                class="card-publication-cover" loading="lazy">
           <div class="card-publication-body">
-            <p class="card-publication-ref">IN Mediadora, 2021.</p>
+            <p class="card-publication-ref">IMN Editora, 2023.</p>
             <h3>Winnicott Seminários Mineiros: Ambiente e Holding</h3>
-            <p>Obra coletiva que reúne seminários sobre a teoria winnicottiana do ambiente e holding — conceitos centrais para a compreensão do amadurecimento emocional.</p>
+            <p>Este livro reúne alguns dos trabalhos apresentados no XVI Encontro Brasileiro sobre o Pensamento de Donald W. Winnicott (Ambiente e Holding), realizado em Belo Horizonte-MG, na modalidade on-line. Psicólogos e Psicanalistas de todo o Brasil expuseram da forma mais completa possível essas relações, com a clínica e as dificuldades para o manejo dos estragos causados por um ambiente falho em fornecer holding para se alcançar o sentimento pleno de existir.</p>
             <div class="card-publication-actions">
               <a href="https://inmeditora.com.br/produto/winnicott-seminarios-mineiros/"
-                 class="btn-secondary btn-sm" target="_blank" rel="noopener noreferrer">Comprar</a>
+                 class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Comprar</a>
             </div>
           </div>
         </article>
@@ -256,9 +266,9 @@ get_header();
                alt="Capa — A Clínica Social: Percurso e Perspectivas"
                class="card-publication-cover" loading="lazy">
           <div class="card-publication-body">
-            <p class="card-publication-ref">Instituto de Psicologia da Universidade de São Paulo — Projeto APOIAR, 2022.</p>
+            <p class="card-publication-ref">Instituto de Psicologia da Universidade de São Paulo, 2022.</p>
             <h3>A Clínica Social: Percurso e Perspectivas</h3>
-            <p>Obra coletiva sobre a clínica social winnicottiana e o atendimento psicológico em contextos de vulnerabilidade, reunindo pesquisas do Projeto APOIAR Online.</p>
+            <p>Este e-book reúne os trabalhos, reflexões atuais e experiências clínicas apresentados na 20ª Jornada APOIAR, um espaço de diálogo, intercâmbio e produção de conhecimento voltado à Saúde Mental e à Psicologia Clínica Social. Esta edição possui um significado especial por celebrar os 20 anos do Projeto APOIAR, vinculado ao Instituto de Psicologia da Universidade de São Paulo (IPUSP), reconhecendo sua importante contribuição para a pesquisa, a formação de profissionais e o cuidado em saúde mental.</p>
             <div class="card-publication-actions">
               <a href="https://www.rogeriopaulopsi.com.br/_files/ugd/4ada22_eaf9f450d4024047a4018cd35e1ae952.pdf"
                  class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Baixar</a>
@@ -271,9 +281,9 @@ get_header();
                alt="Capa — Adolescência: Desafios, Sofrimento e Esperança"
                class="card-publication-cover" loading="lazy">
           <div class="card-publication-body">
-            <p class="card-publication-ref">Instituto de Psicologia da Universidade de São Paulo, 2021.</p>
+            <p class="card-publication-ref">Instituto de Psicologia da Universidade de São Paulo, 2023.</p>
             <h3>Adolescência: Desafios, Sofrimento e Esperança</h3>
-            <p>As transformações contemporâneas têm provocado mudanças significativas nos modos de ser e exercer a função adolescente na atualidade, à luz da teoria winnicottiana.</p>
+            <p>Este e-book reúne reflexões e estudos sobre os desafios da adolescência no contexto contemporâneo, com especial atenção aos impactos observados após a pandemia. Temas como sofrimento emocional, depressão, ansiedade, vulnerabilidades e esperança são abordados a partir da prática clínica, da pesquisa e da experiência de profissionais dedicados à saúde mental. Uma leitura voltada a pais, educadores, profissionais da saúde e a todos que desejam compreender melhor os desafios e as possibilidades de cuidado com os adolescentes na atualidade.</p>
             <div class="card-publication-actions">
               <a href="https://www.rogeriopaulopsi.com.br/_files/ugd/4ada22_55a8b9b82e04425a93769f258e3e69bc.pdf"
                  class="btn-primary btn-sm" target="_blank" rel="noopener noreferrer">Baixar</a>

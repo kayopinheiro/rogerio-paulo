@@ -24,7 +24,7 @@ get_header();
     <span class="overline" style="color: var(--color-primary-mid);">Quem Sou</span>
     <h1>O Homem, o Psicólogo e o Psicanalista.</h1>
     <p class="lead">
-      Cearense, 40+, atravessando a segunda metade da vida com o desejo sincero de cultivar uma existência mais saudável, autêntica e conectada com o essencial.
+      Cearense, homem 40+, filho, amigo, marido, psicólogo, terapeuta e analista winnicottiano, fundador do Instituto Indivíduo Saudável (IS). Atravessando a segunda metade da vida tentando viver de forma autêntica, conectado comigo mesmo, com o outro e com a natureza.
     </p>
 
   </div>
@@ -44,17 +44,26 @@ get_header();
         <h2 id="sec-homem-titulo">O Homem</h2>
 
         <p>
-          Além do consultório, Rogério vive relações de cuidado mútuo com homens de todo o Brasil desde 2007 — em encontros individuais, no Grupo Terapêutico de Homens e com amigos pelo mundo. Participa de grupos de autoconhecimento como jiu-jítsu, corrida e meditação.
+          Sou um homem paradoxal: sinto-me seguro naquilo que já é conhecido, mas continuo fazendo mudanças ao longo da vida. Tenho compreendido que uma vida que vale a pena ser vivida envolve um processo constante de transformação e, ao mesmo tempo, uma continuidade na experiência de ser quem sou. Mesmo quando uma parte de mim insiste em se definir pelo que faz, sigo aprendendo a valorizar quem sou para além das realizações, dos papéis e das responsabilidades que assumo.
         </p>
         <p>
-          Anualmente, participa do curso de formação "Calibrando Âncoras" (Cultivando Homens Maduros), promovido pela Ilumne Inspiração — experiência significativa para seu próprio amadurecimento emocional e espiritual.
+          Minha história de vida, assim como minha trajetória na Psicologia, é marcada por mudanças, encontros e recomeços. Em determinado momento, deixei um cargo de gerência em um shopping em Fortaleza e iniciei uma nova etapa como estagiário em um banco público, movido pelo desejo de seguir carreira no serviço público. Porém, em 2007, durante esse período de transição, vivi um encontro profundamente curativo e transformador com Jesus, uma experiência que redefiniu meus planos, ampliou minha compreensão sobre a vida e mudou significativamente a direção da minha caminhada.
         </p>
         <p>
-          Exerce trabalho voluntário há mais de 25 anos. Iniciou ainda na adolescência, em 1999, tendo experiência com crianças, adolescentes, adultos e idosos.
+          Após um intenso processo de reflexão sobre a vida que desejava viver, comecei a caminhar de forma mais intencional ao lado de pessoas, especialmente de outros homens, em experiências de cuidado mútuo, crescimento humano e construção de vínculos mais autênticos. Com o tempo, percebi que essa caminhada havia começado muito antes.
+        </p>
+        <p>
+          Desde 1997, ainda na adolescência, mesmo sem compreender plenamente o que fazia, já participava de experiências de cuidado individual, coletivo e comunitário, movido pelo desejo genuíno de ajudar pessoas em seus processos de desenvolvimento. Sem perceber, algo essencial já acontecia dentro de mim: a necessidade de integrar quem sou, aquilo em que acredito e o que poderia oferecer para cuidar e ajudar o outro.
+        </p>
+        <p>
+          Foi nesse recomeço, já com quase 30 anos de idade, durante a graduação em Psicologia e no meu próprio processo terapêutico e analítico, que algo importante se consolidou em minha trajetória. Ao concluir a graduação, em 2017, tomei uma decisão que ultrapassava a escolha de uma profissão: continuar construindo uma vida mais saudável, criativa e real. Minha história me conduziu à Psicologia não apenas pelos estudos, mas também pelos encontros, pelas crises, pelos vínculos e pelas perguntas complexas que não cabem em respostas rápidas.
+        </p>
+        <p>
+          Hoje continuo essa caminhada cultivando práticas de autocuidado que fazem sentido para mim. Antes de ser um profissional, sou um ser humano em constante processo de transformação, aprendizado e amadurecimento. Acredito que cuidado cura e que amadurecer não significa chegar a um lugar pronto, mas permanecer aberto ao crescimento, às mudanças.
         </p>
 
         <blockquote>
-          "Antes ser — fazer e deixar de ser fazer. Mas ser, antes de tudo."
+          "Após ser — fazer e deixar-se fazer. Mas ser, antes de tudo."
           <cite>Donald Winnicott</cite>
         </blockquote>
 
@@ -70,7 +79,7 @@ get_header();
 
       <div class="col-img">
         <img
-          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/foto-rogerio-hero.jpg' ); ?>"
+          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/o-homem.avif' ); ?>"
           alt="Rogério Paulo"
           width="560"
           height="520"
@@ -102,7 +111,7 @@ get_header();
 
       <div class="col-img">
         <img
-          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/foto-rogerio-psicologo.jpg' ); ?>"
+          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/o-psicologo.avif' ); ?>"
           alt="Rogério Paulo — psicólogo"
           width="560"
           height="520"
@@ -174,7 +183,7 @@ get_header();
 
       <div class="col-img">
         <img
-          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/foto-rogerio-psicanalista.jpg' ); ?>"
+          src="<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/o-psicanalista.png' ); ?>"
           alt="Rogério Paulo — psicanalista"
           width="560"
           height="520"
