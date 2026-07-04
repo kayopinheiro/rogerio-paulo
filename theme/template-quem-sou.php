@@ -62,11 +62,6 @@ get_header();
           Hoje continuo essa caminhada cultivando práticas de autocuidado que fazem sentido para mim. Antes de ser um profissional, sou um ser humano em constante processo de transformação, aprendizado e amadurecimento. Acredito que cuidado cura e que amadurecer não significa chegar a um lugar pronto, mas permanecer aberto ao crescimento, às mudanças.
         </p>
 
-        <blockquote>
-          "Após ser — fazer e deixar-se fazer. Mas ser, antes de tudo."
-          <cite>Donald Winnicott</cite>
-        </blockquote>
-
         <div class="btn-group">
           <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de conversar com você.' ); ?>"
              class="btn-primary"
@@ -97,6 +92,7 @@ get_header();
      Bloco: 2 colunas | foto esquerda | lista direita
      Fundo: --color-bg-section
 ============================================================ -->
+<?php if ( false ) : // Seção oculta a pedido ?>
 <section class="section section--alt" aria-labelledby="sec-psicologo-titulo"
   style="
     background-image:
@@ -152,12 +148,14 @@ get_header();
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 
 <!-- ============================================================
      SEÇÃO 4 — O PSICANALISTA
      Bloco: 2 colunas | lista esquerda | foto direita
 ============================================================ -->
+<?php if ( false ) : // Seção oculta a pedido ?>
 <section class="section section--white" aria-labelledby="sec-psicanalista-titulo">
   <div class="container">
     <div class="grid-2col grid-2col--img-right">
@@ -194,29 +192,20 @@ get_header();
     </div>
   </div>
 </section>
+<?php endif; ?>
 
 
 <!-- ============================================================
      SEÇÃO 5 — CTA FINAL
      Fundo: --color-bg-footer
 ============================================================ -->
-<section class="section-cta" aria-labelledby="sec-cta-quem-sou-titulo">
+<section class="section-cta" aria-label="Citação de Donald Winnicott">
   <div class="container">
 
-    <h2 id="sec-cta-quem-sou-titulo">Vamos conversar?</h2>
-
-    <p>
-      Se algo do que você leu aqui fez sentido — seja a trajetória, a abordagem ou o cuidado que busco ter — talvez seja hora de marcarmos uma conversa.
-    </p>
-
-    <div style="text-align: center;">
-      <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de agendar uma sessão inicial.' ); ?>"
-         class="btn-primary btn-lg"
-         target="_blank"
-         rel="noopener noreferrer">
-        Agendar sessão inicial →
-      </a>
-    </div>
+    <blockquote>
+      "Após ser — fazer e deixar-se fazer.<br>Mas ser, antes de tudo."
+      <cite>Donald Winnicott</cite>
+    </blockquote>
 
   </div>
 </section>
