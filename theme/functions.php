@@ -35,7 +35,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-variables',
         get_stylesheet_directory_uri() . '/css/variables.css',
         [ 'rogerio-paulo-fonts' ],
-        '1.1.3'
+        filemtime( get_stylesheet_directory() . '/css/variables.css' )
     );
 
     // Reset, body e tipografia global
@@ -43,7 +43,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-base',
         get_stylesheet_directory_uri() . '/css/base.css',
         [ 'rogerio-paulo-variables' ],
-        '1.1.3'
+        filemtime( get_stylesheet_directory() . '/css/base.css' )
     );
 
     // Botões, cards, tags, blockquote, WhatsApp flutuante
@@ -51,7 +51,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-components',
         get_stylesheet_directory_uri() . '/css/components.css',
         [ 'rogerio-paulo-base' ],
-        '1.1.3'
+        filemtime( get_stylesheet_directory() . '/css/components.css' )
     );
 
     // Navbar, footer, seções, grids, FAQ
@@ -59,7 +59,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-layout',
         get_stylesheet_directory_uri() . '/css/layout.css',
         [ 'rogerio-paulo-components' ],
-        '1.1.3'
+        filemtime( get_stylesheet_directory() . '/css/layout.css' )
     );
 
     // Declaração do tema filho (style.css) — depois de tudo
@@ -67,7 +67,7 @@ function rogerio_paulo_enqueue_styles() {
         'rogerio-paulo-child',
         get_stylesheet_uri(),
         [ 'rogerio-paulo-layout' ],
-        '1.1.3'
+        filemtime( get_stylesheet_directory() . '/style.css' )
     );
 }
 add_action( 'wp_enqueue_scripts', 'rogerio_paulo_enqueue_styles' );

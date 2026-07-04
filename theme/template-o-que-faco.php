@@ -291,7 +291,7 @@ get_header();
      Bloco: 2 colunas | texto esquerda (sticky) | accordion direita
      Referência: screenshot/Mindwise Psychology Counseling Template Preview (3).png — FAQ
 ============================================================ -->
-<section class="section section--white" aria-labelledby="sec-faq-titulo">
+<section class="section section--white section--divider-top" aria-labelledby="sec-faq-titulo">
   <div class="container">
     <div class="faq-section">
 
