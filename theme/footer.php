@@ -55,7 +55,7 @@
 
     <!-- Bottom bar -->
     <div class="site-footer-bottom">
-      <small>© 2026 ANTONIO ROGERIO PAULO DE SOUSA LTDA — CNPJ 57.886.734/0001-89</small>
+      <small>© 2026 ANTONIO ROGERIO PAULO DE SOUSA LTDA — CNPJ 57.986.734/0001-09</small>
     </div>
 
   </div>

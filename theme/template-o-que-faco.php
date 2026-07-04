@@ -68,11 +68,6 @@ get_header();
           A terapia e análise que realizo estão ancoradas na psicanálise winnicottiana, abordagem que valoriza o ambiente relacional como fator essencial para o amadurecimento emocional. Trata-se de um trabalho cuidadoso, sustentado por uma escuta ética, acolhedora e comprometida com o desenvolvimento da saúde psíquica em sua totalidade.
         </p>
 
-        <blockquote>
-          "Faço análise porque é do que o paciente necessita. Se o paciente não necessita de análise, então faço alguma outra coisa."
-          <cite>Donald Winnicott</cite>
-        </blockquote>
-
         <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de agendar uma sessão.' ); ?>"
            class="btn-primary"
            target="_blank"
@@ -172,15 +167,7 @@ get_header();
   class="section-group-hero"
   aria-labelledby="sec-grupo-homens-titulo"
 >
-  <div
-    class="section-group-hero-bg"
-    style="background-image: url('<?php echo esc_url( get_stylesheet_directory_uri() . '/assets/caquito-background.webp' ); ?>');"
-    role="img"
-    aria-label="Grupo Terapêutico para Homens"
-  ></div>
-  <div class="section-group-hero-overlay" aria-hidden="true"></div>
-
-  <div class="container" style="position: relative; z-index: 1;">
+  <div class="container">
     <div class="section-group-hero-grid">
 
     <!-- Coluna esquerda: overline, título e parágrafos -->
@@ -211,7 +198,7 @@ get_header();
         <li>Um grupo de homens que se colocam como superiores — valoriza-se a vulnerabilidade, as potencialidades e as dificuldades de cada participante</li>
       </ul>
 
-      <hr style="border: none; border-top: 1px solid rgba(255,255,255,0.2); margin: var(--space-6) 0;">
+      <hr style="border: none; border-top: 1px solid var(--color-border); margin: var(--space-6) 0;">
 
       <h3 style="margin-top: 0;">Como funciona</h3>
 
@@ -254,7 +241,7 @@ get_header();
      Âncora: id="pesquisa"
      Bloco: 2 colunas | texto esquerda | foto direita
 ============================================================ -->
-<section id="pesquisa" class="section section--white" aria-labelledby="sec-pesquisa-titulo">
+<section id="pesquisa" class="section section--white section--divider-top" aria-labelledby="sec-pesquisa-titulo">
   <div class="container">
     <div class="grid-2col grid-2col--img-right">
 
@@ -385,27 +372,13 @@ get_header();
      SEÇÃO 8 — CTA FINAL
      Fundo: --color-bg-footer
 ============================================================ -->
-<section class="section-cta" aria-labelledby="sec-cta-o-que-faco-titulo">
+<section class="section-cta" aria-label="Citação de Donald Winnicott">
   <div class="container">
 
-    <h2 id="sec-cta-o-que-faco-titulo">Pronto para dar o próximo passo?</h2>
-
-    <p>Não importa por onde você queira começar — o que importa é que você escolheu se cuidar.</p>
-
-    <div class="btn-group" style="justify-content: center;">
-      <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de agendar uma sessão individual.' ); ?>"
-         class="btn-primary btn-lg"
-         target="_blank"
-         rel="noopener noreferrer">
-        Agendar sessão individual →
-      </a>
-      <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de entrar no Grupo Terapêutico para Homens.' ); ?>"
-         class="btn-ghost btn-lg"
-         target="_blank"
-         rel="noopener noreferrer">
-        Entrar no grupo de homens →
-      </a>
-    </div>
+    <blockquote>
+      "Faço análise porque é do que o paciente necessita. Se o paciente não necessita de análise, então faço alguma outra coisa."
+      <cite>Donald Winnicott</cite>
+    </blockquote>
 
   </div>
 </section>

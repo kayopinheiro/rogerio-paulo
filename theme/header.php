@@ -31,7 +31,7 @@
       <ul class="site-nav">
         <li><a href="<?php echo esc_url( home_url( '/' ) ); ?>">Boas-vindas</a></li>
         <li><a href="<?php echo esc_url( home_url( '/quem-sou' ) ); ?>">Quem Sou</a></li>
-        <li><a href="<?php echo esc_url( home_url( '/o-que-faco' ) ); ?>">O Que Faço</a></li>
+        <li><a href="<?php echo esc_url( home_url( '/o-que-faco' ) ); ?>">Que Faço</a></li>
         <li><a href="<?php echo esc_url( home_url( '/publicacoes' ) ); ?>">Publicações</a></li>
         <li><a href="<?php echo esc_url( home_url( '/blog' ) ); ?>">Blog</a></li>
       </ul>
@@ -67,7 +67,7 @@
 <nav id="site-nav-mobile" class="site-nav-mobile" aria-label="Navegação mobile">
   <a href="<?php echo esc_url( home_url( '/' ) ); ?>">Boas-vindas</a>
   <a href="<?php echo esc_url( home_url( '/quem-sou' ) ); ?>">Quem Sou</a>
-  <a href="<?php echo esc_url( home_url( '/o-que-faco' ) ); ?>">O Que Faço</a>
+  <a href="<?php echo esc_url( home_url( '/o-que-faco' ) ); ?>">Que Faço</a>
   <a href="<?php echo esc_url( home_url( '/publicacoes' ) ); ?>">Publicações</a>
   <a href="<?php echo esc_url( home_url( '/blog' ) ); ?>">Blog</a>
   <a href="https://wa.me/5511915713774?text=<?php echo rawurlencode( 'Olá, Rogério! Gostaria de agendar uma sessão.' ); ?>"
